@@ -27,20 +27,22 @@ Partial Class Form1
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MaskedTextBox3 = New System.Windows.Forms.MaskedTextBox()
-        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox5 = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(382, 45)
+        Me.ComboBox1.Location = New System.Drawing.Point(305, 73)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(201, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(278, 24)
         Me.ComboBox1.TabIndex = 0
         '
         'MenuStrip1
@@ -71,61 +73,78 @@ Partial Class Form1
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(53, 24)
         Me.HelpToolStripMenuItem.Text = "Help"
         '
-        'MaskedTextBox3
-        '
-        Me.MaskedTextBox3.Location = New System.Drawing.Point(222, 75)
-        Me.MaskedTextBox3.Mask = "00000"
-        Me.MaskedTextBox3.Name = "MaskedTextBox3"
-        Me.MaskedTextBox3.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.MaskedTextBox3.Size = New System.Drawing.Size(61, 22)
-        Me.MaskedTextBox3.TabIndex = 6
-        Me.MaskedTextBox3.Text = "00000"
-        '
-        'MaskedTextBox2
-        '
-        Me.MaskedTextBox2.Location = New System.Drawing.Point(146, 75)
-        Me.MaskedTextBox2.Mask = "00000"
-        Me.MaskedTextBox2.Name = "MaskedTextBox2"
-        Me.MaskedTextBox2.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.MaskedTextBox2.Size = New System.Drawing.Size(61, 22)
-        Me.MaskedTextBox2.TabIndex = 5
-        Me.MaskedTextBox2.Text = "00000"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(279, 52)
+        Me.Label1.Location = New System.Drawing.Point(12, 100)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(60, 17)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Found ="
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(468, 148)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 24)
-        Me.ComboBox2.TabIndex = 8
         '
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Location = New System.Drawing.Point(12, 73)
         Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox3.Size = New System.Drawing.Size(88, 24)
         Me.ComboBox3.TabIndex = 9
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 52)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(52, 17)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Project"
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Location = New System.Drawing.Point(106, 73)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(88, 24)
+        Me.ComboBox4.TabIndex = 11
+        '
+        'ComboBox5
+        '
+        Me.ComboBox5.FormattingEnabled = True
+        Me.ComboBox5.Location = New System.Drawing.Point(200, 73)
+        Me.ComboBox5.Name = "ComboBox5"
+        Me.ComboBox5.Size = New System.Drawing.Size(88, 24)
+        Me.ComboBox5.TabIndex = 12
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(103, 52)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(34, 17)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "Part"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(200, 53)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(43, 17)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Label"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(595, 336)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.ComboBox5)
+        Me.Controls.Add(Me.ComboBox4)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MaskedTextBox3)
-        Me.Controls.Add(Me.MaskedTextBox2)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -143,9 +162,11 @@ Partial Class Form1
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MaskedTextBox3 As MaskedTextBox
-    Friend WithEvents MaskedTextBox2 As MaskedTextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents ComboBox5 As ComboBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class
