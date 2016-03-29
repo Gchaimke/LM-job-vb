@@ -8,14 +8,6 @@ Public Class Form1
 
     Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
         MainDirectoryPath = Directory.GetFiles(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/test")
-        ProjectsDirs = Directory.GetDirectories(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/test")
-
-        For Each dir As String In ProjectsDirs
-            Dim dirInfo As New System.IO.DirectoryInfo(dir)
-            ComboBox1.Items.Add(dirInfo.Name)
-        Next
-
-
         Main(MainDirectoryPath)
     End Sub
 
@@ -55,6 +47,21 @@ Public Class Form1
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         Dim OpenFile As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/test/" & ComboBox1.SelectedItem.ToString & ".txt"
         System.Diagnostics.Process.Start(OpenFile)
+    End Sub
+
+
+    Private Sub ComboBox3_KeyUp(sender As Object, e As KeyEventArgs) Handles ComboBox3.KeyUp
+        ComboBox3.Items.Clear()
+        Dim SearchFor As String = "*" & ComboBox3.Text.ToString & "*"
+        ProjectsDirs = Directory.GetDirectories(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/test", SearchFor)
+        Dim i As Integer
+        For Each dir As String In ProjectsDirs
+
+            Dim dirInfo As New System.IO.DirectoryInfo(dir)
+            ComboBox3.Items.Add(dirInfo.Name)
+            i += 1
+        Next
+        Label1.Text = "Found =" & i
     End Sub
 
 End Class
