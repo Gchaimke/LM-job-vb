@@ -3,12 +3,13 @@ Imports System.IO
 Imports System.Collections
 
 Public Class Form1
-    Dim MainDirectoryPath As String()
-    Dim ProjectsDirs As String()
+    Dim MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\LM-job"
+    Dim SelectedPath As String()
+    Dim ProjectsDir As String()
+    Dim CurrentProject As String
 
     Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
-        MainDirectoryPath = Directory.GetFiles(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/test")
-        Main(MainDirectoryPath)
+
     End Sub
 
     Public Sub Main(ByVal args() As String)
@@ -34,34 +35,45 @@ Public Class Form1
         Dim subdirectoryEntries As String() = Directory.GetDirectories(targetDirectory)
         For Each subdirectory In subdirectoryEntries
             ProcessDirectory(subdirectory)
-            ComboBox1.Items.Add(subdirectoryEntries)
+            ListBox2.Items.Add(subdirectoryEntries)
         Next subdirectory
     End Sub 'Processdirectory
 
     Public Sub ProcessFile(ByVal myPath As String)
         Console.WriteLine("Processed file '{0}'.", myPath)
         Dim fileName As String = Path.GetFileNameWithoutExtension(myPath)
-        ComboBox1.Items.Add(fileName)
+        ListBox2.Items.Add(fileName)
     End Sub 'ProcessFile
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        Dim OpenFile As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/test/" & ComboBox1.SelectedItem.ToString & ".txt"
-        System.Diagnostics.Process.Start(OpenFile)
+    Private Sub ListBox2_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox2.SelectedIndexChanged
+        Dim OpenFile As String = MAIN_DIR_NAME & "\" & ListBox2.SelectedItem.ToString & ".lmj"
+        MsgBox(OpenFile)
+        Try
+            System.Diagnostics.Process.Start(OpenFile)
+        Catch ex As Exception
+            MsgBox(ex.ToString)
+        End Try
+
     End Sub
 
-
-    Private Sub ComboBox3_KeyUp(sender As Object, e As KeyEventArgs) Handles ComboBox3.KeyUp
-        ComboBox3.Items.Clear()
-        Dim SearchFor As String = "*" & ComboBox3.Text.ToString & "*"
-        ProjectsDirs = Directory.GetDirectories(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "/test", SearchFor)
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        ListBox1.Items.Clear()
+        Dim SearchFor As String = "*" & TextBox1.Text.ToString & "*"
+        ProjectsDir = Directory.GetDirectories(MAIN_DIR_NAME, SearchFor)
         Dim i As Integer
-        For Each dir As String In ProjectsDirs
+        For Each dir As String In ProjectsDir
 
             Dim dirInfo As New System.IO.DirectoryInfo(dir)
-            ComboBox3.Items.Add(dirInfo.Name)
+            ListBox1.Items.Add(dirInfo.Name)
             i += 1
         Next
         Label1.Text = "Found =" & i
+    End Sub
+
+    Private Sub ListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox1.SelectedIndexChanged
+        CurrentProject = MAIN_DIR_NAME & "\" & ListBox1.SelectedItem.ToString
+        SelectedPath = Directory.GetFiles(CurrentProject)
+        Main(SelectedPath)
     End Sub
 
 End Class
