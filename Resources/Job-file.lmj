@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LMJob FileSchemaVersion="1.0" Author="Chaim Gorbov">
+  <Description>Test Job</Description>
+  <LabelFiles>
+    <LabelFile Path="C:\ProgramData\Brady\LabelMark\Label Files\3ps-250-2-test1.l5f" Printer="CAB XD4M/300" NumberOfCopiesToPrint="2" SideToPrint="BothSides" StandardPrinting="True" PartID="3PS-250-2" LabelsToPrint="AllLabels" HorizontalPrinterPosition="0" VerticalPrinterPosition="0" />
+    <LabelFile Path="C:\ProgramData\Brady\LabelMark\Label Files\‏‏3ps-250-2-test2.l5f" Printer="CAB XD4M/300" NumberOfCopiesToPrint="2" SideToPrint="BothSides" StandardPrinting="True" PartID="3PS-250-2" LabelsToPrint="AllLabels" HorizontalPrinterPosition="0" VerticalPrinterPosition="0" />
+  </LabelFiles>
+</LMJob>
