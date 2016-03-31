@@ -121,7 +121,31 @@
   <data name="Blank_job" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Job-file.lmj;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Label3PS2502" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Label3PS2502.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="_3PS_094_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-094-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_1000_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-1000-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_125_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-125-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_1500_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-1500-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_187_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-187-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_250_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-250-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_375_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-375-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_500_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-500-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_750_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-750-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

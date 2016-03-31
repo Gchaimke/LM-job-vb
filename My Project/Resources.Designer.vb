@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
-        Friend ReadOnly Property Blank_job() As Byte()
+        Friend ReadOnly Property _3PS_094_2_WT() As Byte()
             Get
-                Dim obj As Object = ResourceManager.GetObject("Blank_job", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_3PS_094_2_WT", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property
@@ -73,9 +73,89 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
-        Friend ReadOnly Property Label3PS2502() As Byte()
+        Friend ReadOnly Property _3PS_1000_2_WT() As Byte()
             Get
-                Dim obj As Object = ResourceManager.GetObject("Label3PS2502", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("_3PS_1000_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3PS_125_2_WT() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3PS_125_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3PS_1500_2_WT() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3PS_1500_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3PS_187_2_WT() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3PS_187_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3PS_250_2_WT() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3PS_250_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3PS_375_2_WT() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3PS_375_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3PS_500_2_WT() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3PS_500_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property _3PS_750_2_WT() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_3PS_750_2_WT", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Byte[].
+        '''</summary>
+        Friend ReadOnly Property Blank_job() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Blank_job", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property

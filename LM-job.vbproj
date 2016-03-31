@@ -118,6 +118,15 @@
     </None>
     <None Include="App.config" />
     <None Include="Resources\111000256.lmj" />
+    <None Include="Resources\3PS-094-2-WT.l5f" />
+    <None Include="Resources\3PS-1000-2-WT.l5f" />
+    <None Include="Resources\3PS-125-2-WT.l5f" />
+    <None Include="Resources\3PS-1500-2-WT.l5f" />
+    <None Include="Resources\3PS-187-2-WT.l5f" />
+    <None Include="Resources\3PS-250-2-WT.l5f" />
+    <None Include="Resources\3PS-375-2-WT.l5f" />
+    <None Include="Resources\3PS-500-2-WT.l5f" />
+    <None Include="Resources\3PS-750-2-WT.l5f" />
     <None Include="Resources\Job-file.lmj" />
     <None Include="Resources\Label3PS2502.l5f" />
   </ItemGroup>
