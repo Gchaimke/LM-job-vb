@@ -33,6 +33,10 @@ Partial Class Form1
         Me.LstJobs = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnOpen = New System.Windows.Forms.Button()
+        Me.BtnDlete = New System.Windows.Forms.Button()
+        Me.NewProjectFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewJobFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,12 +47,13 @@ Partial Class Form1
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(580, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(369, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'FileToolStripMenuItem
         '
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectFolderToolStripMenuItem, Me.NewJobFileToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -90,47 +95,79 @@ Partial Class Form1
         Me.LsbProjects.FormattingEnabled = True
         Me.LsbProjects.Location = New System.Drawing.Point(9, 97)
         Me.LsbProjects.Name = "LsbProjects"
-        Me.LsbProjects.Size = New System.Drawing.Size(100, 160)
+        Me.LsbProjects.Size = New System.Drawing.Size(108, 160)
         Me.LsbProjects.TabIndex = 15
         '
         'TxbFilter1
         '
         Me.TxbFilter1.Location = New System.Drawing.Point(9, 59)
         Me.TxbFilter1.Name = "TxbFilter1"
-        Me.TxbFilter1.Size = New System.Drawing.Size(100, 20)
+        Me.TxbFilter1.Size = New System.Drawing.Size(108, 20)
         Me.TxbFilter1.TabIndex = 16
         '
         'LstJobs
         '
         Me.LstJobs.FormattingEnabled = True
-        Me.LstJobs.Location = New System.Drawing.Point(115, 97)
+        Me.LstJobs.Location = New System.Drawing.Point(128, 97)
         Me.LstJobs.Name = "LstJobs"
-        Me.LstJobs.Size = New System.Drawing.Size(195, 160)
+        Me.LstJobs.Size = New System.Drawing.Size(145, 160)
         Me.LstJobs.TabIndex = 17
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(332, 233)
+        Me.Button1.Location = New System.Drawing.Point(9, 263)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(111, 23)
+        Me.Button1.Size = New System.Drawing.Size(108, 23)
         Me.Button1.TabIndex = 18
         Me.Button1.Text = "New Project folder"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(332, 204)
+        Me.Button2.Location = New System.Drawing.Point(128, 263)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(111, 23)
+        Me.Button2.Size = New System.Drawing.Size(145, 23)
         Me.Button2.TabIndex = 19
         Me.Button2.Text = "New job file"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'BtnOpen
+        '
+        Me.BtnOpen.Location = New System.Drawing.Point(279, 205)
+        Me.BtnOpen.Name = "BtnOpen"
+        Me.BtnOpen.Size = New System.Drawing.Size(75, 23)
+        Me.BtnOpen.TabIndex = 20
+        Me.BtnOpen.Text = "Open"
+        Me.BtnOpen.UseVisualStyleBackColor = True
+        '
+        'BtnDlete
+        '
+        Me.BtnDlete.Location = New System.Drawing.Point(279, 234)
+        Me.BtnDlete.Name = "BtnDlete"
+        Me.BtnDlete.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDlete.TabIndex = 21
+        Me.BtnDlete.Text = "Delete"
+        Me.BtnDlete.UseVisualStyleBackColor = True
+        '
+        'NewProjectFolderToolStripMenuItem
+        '
+        Me.NewProjectFolderToolStripMenuItem.Name = "NewProjectFolderToolStripMenuItem"
+        Me.NewProjectFolderToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.NewProjectFolderToolStripMenuItem.Text = "New Project folder"
+        '
+        'NewJobFileToolStripMenuItem
+        '
+        Me.NewJobFileToolStripMenuItem.Name = "NewJobFileToolStripMenuItem"
+        Me.NewJobFileToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.NewJobFileToolStripMenuItem.Text = "New Job file"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(580, 286)
+        Me.ClientSize = New System.Drawing.Size(369, 295)
+        Me.Controls.Add(Me.BtnDlete)
+        Me.Controls.Add(Me.BtnOpen)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.LstJobs)
@@ -160,4 +197,8 @@ Partial Class Form1
     Friend WithEvents LstJobs As ListBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents BtnOpen As Button
+    Friend WithEvents BtnDlete As Button
+    Friend WithEvents NewProjectFolderToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NewJobFileToolStripMenuItem As ToolStripMenuItem
 End Class

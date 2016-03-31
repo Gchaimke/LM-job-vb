@@ -13,6 +13,10 @@ Public Class Form1
     Dim ProjectsDir As String()
     Dim CurrentProject As String
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        BtnOpen.Enabled = False
+        BtnDlete.Enabled = False
+    End Sub
 
     Public Sub Main(ByVal args() As String)
         Dim path As String
@@ -70,22 +74,22 @@ Public Class Form1
     End Sub
 
     Private Sub LstJobs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJobs.SelectedIndexChanged
-        Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
-        If MsgBoxResult.Ok = 1 Then
-            Try 'try to open file with LabelMark
-                'Create the XmlDocument.
-                Dim doc As New XmlDocument()
-                doc.Load(OpenFile)
-                'Display all the book titles.
-                Dim ReturnValue As New List(Of String)
-                For Each node As XmlNode In doc.SelectNodes("//LabelFile")
-                    LstJobs.Items.Add(node.Attributes("Path").Value)
-                Next
-                'System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
-            Catch ex As Exception
-                MsgBox(ex.Message.ToString)
-            End Try
-        End If
+        BtnOpen.Enabled = True
+        BtnDlete.Enabled = True
+        'Try 'try to open file with LabelMark
+        '    'Create the XmlDocument.
+        '    Dim doc As New XmlDocument()
+        '    doc.Load(OpenFile)
+        '    'Display all the book titles.
+        '    Dim ReturnValue As New List(Of String)
+        '    For Each node As XmlNode In doc.SelectNodes("//LabelFile")
+        '        LstJobs.Items.Add(node.Attributes("Path").Value)
+        '    Next
+        '    'System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
+        'Catch ex As Exception
+        '    MsgBox(ex.Message.ToString)
+        '    End Try
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -103,4 +107,54 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim FolderName As String = MAIN_DIR_NAME & "\" & InputBox("Project Name", "Please Name new job file")
+        Dim NewJobName As String = InputBox("Job Name", "Please Name new job file")
+        Try
+            If FolderName = "" Then
+                MsgBox("Please set Project name")
+            ElseIf (System.IO.Directory.Exists(FolderName)) Then
+                If NewJobName = "" Then
+                    MsgBox("Please set Label name")
+                Else
+                    File.WriteAllBytes(FolderName & "\" & NewJobName & ".lmj", CType(My.Resources.ResourceManager.GetObject("Blank_job"), Byte()))
+                    MsgBox(NewJobName & " created.")
+                End If
+            Else
+                MsgBox("Project " & NewJobName & " not exist!")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
+
+    End Sub
+
+    Private Sub BtnOpen_Click(sender As Object, e As EventArgs) Handles BtnOpen.Click
+
+        Try
+            Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+            System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BtnDlete_Click(sender As Object, e As EventArgs) Handles BtnDlete.Click
+        Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+        Dim SelectedRow As Integer = LstJobs.SelectedIndex
+        If System.IO.File.Exists(OpenFile) = True Then
+            LstJobs.Items.RemoveAt(SelectedRow)
+            System.IO.File.Delete(OpenFile)
+            MessageBox.Show("File Deleted")
+
+        End If
+    End Sub
+
+    Private Sub LstJobs_LostFocus(sender As Object, e As EventArgs) Handles LstJobs.LostFocus
+        If BtnOpen.Focused = False Then
+            BtnOpen.Enabled = False
+            BtnDlete.Enabled = False
+        End If
+
+    End Sub
 End Class

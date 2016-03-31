@@ -63,9 +63,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Byte[].
         '''</summary>
-        Friend ReadOnly Property Job_file() As Byte()
+        Friend ReadOnly Property Blank_job() As Byte()
             Get
-                Dim obj As Object = ResourceManager.GetObject("Job_file", resourceCulture)
+                Dim obj As Object = ResourceManager.GetObject("Blank_job", resourceCulture)
                 Return CType(obj,Byte())
             End Get
         End Property
