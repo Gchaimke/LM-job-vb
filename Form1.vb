@@ -16,6 +16,13 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BtnOpen.Enabled = False
         BtnDlete.Enabled = False
+        If Not Directory.Exists(MAIN_DIR_NAME) Then
+            System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
+        End If
+        If Not Directory.Exists(MAIN_DIR_NAME & "\Labels\") Then
+            System.IO.Directory.CreateDirectory(MAIN_DIR_NAME & "\Labels\")
+        End If
+
     End Sub
 
     Public Sub Main(ByVal args() As String)
@@ -156,5 +163,9 @@ Public Class Form1
             BtnDlete.Enabled = False
         End If
 
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        FormAddJob.Show()
     End Sub
 End Class
