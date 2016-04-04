@@ -157,6 +157,7 @@ Partial Class FormAddJob
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox2)
         Me.Name = "FormAddJob"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FormAddJob"
         Me.ResumeLayout(False)
         Me.PerformLayout()

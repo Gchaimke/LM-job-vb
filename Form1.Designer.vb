@@ -33,11 +33,12 @@ Partial Class Form1
         Me.LsbProjects = New System.Windows.Forms.ListBox()
         Me.TxbFilter1 = New System.Windows.Forms.TextBox()
         Me.LstJobs = New System.Windows.Forms.ListBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnProject = New System.Windows.Forms.Button()
         Me.BtnOpen = New System.Windows.Forms.Button()
         Me.BtnDlete = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BtnEdit = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,6 +74,7 @@ Partial Class Form1
         '
         'EditToolStripMenuItem
         '
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
@@ -126,23 +128,14 @@ Partial Class Form1
         Me.LstJobs.Size = New System.Drawing.Size(145, 160)
         Me.LstJobs.TabIndex = 3
         '
-        'Button1
+        'BtnProject
         '
-        Me.Button1.Location = New System.Drawing.Point(9, 263)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(108, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "New Project folder"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(128, 263)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(145, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "New job file"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.BtnProject.Location = New System.Drawing.Point(9, 263)
+        Me.BtnProject.Name = "BtnProject"
+        Me.BtnProject.Size = New System.Drawing.Size(108, 23)
+        Me.BtnProject.TabIndex = 4
+        Me.BtnProject.Text = "New Project folder"
+        Me.BtnProject.UseVisualStyleBackColor = True
         '
         'BtnOpen
         '
@@ -164,23 +157,38 @@ Partial Class Form1
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(279, 263)
+        Me.Button3.Location = New System.Drawing.Point(128, 263)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(145, 23)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "New job file"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.Location = New System.Drawing.Point(279, 176)
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEdit.TabIndex = 11
+        Me.BtnEdit.Text = "Edit"
+        Me.BtnEdit.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(432, 295)
+        Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.BtnDlete)
         Me.Controls.Add(Me.BtnOpen)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnProject)
         Me.Controls.Add(Me.LstJobs)
         Me.Controls.Add(Me.TxbFilter1)
         Me.Controls.Add(Me.LsbProjects)
@@ -190,6 +198,7 @@ Partial Class Form1
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "MainForm"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -206,11 +215,12 @@ Partial Class Form1
     Friend WithEvents LsbProjects As ListBox
     Friend WithEvents TxbFilter1 As TextBox
     Friend WithEvents LstJobs As ListBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents BtnProject As Button
     Friend WithEvents BtnOpen As Button
     Friend WithEvents BtnDlete As Button
     Friend WithEvents NewProjectFolderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewJobFileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button3 As Button
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BtnEdit As Button
 End Class

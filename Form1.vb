@@ -1,10 +1,7 @@
 ﻿Option Explicit On
 Option Strict On
 
-Imports System
 Imports System.IO
-Imports System.Collections
-Imports System.Xml
 
 Public Class Form1
     Private MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\LM-job"
@@ -16,6 +13,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         BtnOpen.Enabled = False
         BtnDlete.Enabled = False
+        BtnEdit.Enabled = False
         If Not Directory.Exists(MAIN_DIR_NAME) Then
             System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
         End If
@@ -24,7 +22,7 @@ Public Class Form1
         End If
 
     End Sub
-
+    'Main Sub
     Public Sub Main(ByVal args() As String)
         Dim path As String
         For Each path In args
@@ -39,6 +37,13 @@ Public Class Form1
             End If
         Next path
     End Sub 'Main
+
+    'Process Subs
+    Public Sub ProcessFile(ByVal myPath As String)
+        Console.WriteLine("Processed file '{0}'.", myPath)
+        Dim fileName As String = Path.GetFileNameWithoutExtension(myPath)
+        LstJobs.Items.Add(fileName)
+    End Sub 'ProcessFile
 
     Public Sub ProcessDirectory()
         LsbProjects.Items.Clear()
@@ -58,21 +63,15 @@ Public Class Form1
         End Try
     End Sub 'Processdirectory
 
-    Public Sub ProcessFile(ByVal myPath As String)
-        Console.WriteLine("Processed file '{0}'.", myPath)
-        Dim fileName As String = Path.GetFileNameWithoutExtension(myPath)
-        LstJobs.Items.Add(fileName)
-    End Sub 'ProcessFile
-
     Private Sub TxbFilter1_TextChanged(sender As Object, e As EventArgs) Handles TxbFilter1.TextChanged
-        ProcessDirectory()
+        ProcessDirectory() 'when text input search for directories as TxbFilter1.text
     End Sub
 
     Private Sub LsbProjects_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LsbProjects.SelectedIndexChanged
-        LstJobs.Items.Clear()
+        LstJobs.Items.Clear() 'clear list before add new items
         Try
-            CurrentProject = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString
-            SelectedPath = Directory.GetFiles(CurrentProject)
+            CurrentProject = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString 'get current selected item from projects list
+            SelectedPath = Directory.GetFiles(CurrentProject) 'show all files in the current directory
             Main(SelectedPath)
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
@@ -83,23 +82,28 @@ Public Class Form1
     Private Sub LstJobs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJobs.SelectedIndexChanged
         BtnOpen.Enabled = True
         BtnDlete.Enabled = True
-        'Try 'try to open file with LabelMark
-        '    'Create the XmlDocument.
-        '    Dim doc As New XmlDocument()
-        '    doc.Load(OpenFile)
-        '    'Display all the book titles.
-        '    Dim ReturnValue As New List(Of String)
-        '    For Each node As XmlNode In doc.SelectNodes("//LabelFile")
-        '        LstJobs.Items.Add(node.Attributes("Path").Value)
-        '    Next
-        '    'System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
-        'Catch ex As Exception
-        '    MsgBox(ex.Message.ToString)
-        '    End Try
-
+        BtnEdit.Enabled = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub LstJobs_LostFocus(sender As Object, e As EventArgs) Handles LstJobs.LostFocus
+        If BtnOpen.Focused = False Then
+            BtnOpen.Enabled = False
+            BtnDlete.Enabled = False
+            BtnEdit.Enabled = False
+        End If
+        If BtnEdit.Focused = False Then
+            BtnOpen.Enabled = False
+            BtnDlete.Enabled = False
+            BtnEdit.Enabled = False
+        End If
+        If BtnDlete.Focused = False Then
+            BtnOpen.Enabled = False
+            BtnDlete.Enabled = False
+            BtnEdit.Enabled = False
+        End If
+    End Sub
+    'Start Buttons functions
+    Private Sub BtnProject_Click(sender As Object, e As EventArgs) Handles BtnProject.Click
         Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox("Project Name", "Please Name new project folder")
         Try
             If (Not System.IO.Directory.Exists(NewFolderName)) Then
@@ -114,30 +118,16 @@ Public Class Form1
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Dim FolderName As String = MAIN_DIR_NAME & "\" & InputBox("Project Name", "Please Name new job file")
-        Dim NewJobName As String = InputBox("Job Name", "Please Name new job file")
+    Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Try
-            If FolderName = "" Then
-                MsgBox("Please set Project name")
-            ElseIf (System.IO.Directory.Exists(FolderName)) Then
-                If NewJobName = "" Then
-                    MsgBox("Please set Label name")
-                Else
-                    File.WriteAllBytes(FolderName & "\" & NewJobName & ".lmj", CType(My.Resources.ResourceManager.GetObject("Blank_job"), Byte()))
-                    MsgBox(NewJobName & " created.")
-                End If
-            Else
-                MsgBox("Project " & NewJobName & " not exist!")
-            End If
+            Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\Labels\" & LstJobs.SelectedItem.ToString & ".l5f"
+            System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
         Catch ex As Exception
-            MsgBox(ex.Message.ToString)
-        End Try
 
+        End Try
     End Sub
 
     Private Sub BtnOpen_Click(sender As Object, e As EventArgs) Handles BtnOpen.Click
-
         Try
             Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
             System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
@@ -157,15 +147,30 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub LstJobs_LostFocus(sender As Object, e As EventArgs) Handles LstJobs.LostFocus
-        If BtnOpen.Focused = False Then
-            BtnOpen.Enabled = False
-            BtnDlete.Enabled = False
-        End If
-
-    End Sub
-
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         FormAddJob.Show()
     End Sub
+    'Start Menu Buttons 
+    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
+        AboutBox.Show()
+    End Sub
+
+    Private Sub NewProjectFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewProjectFolderToolStripMenuItem.Click
+        Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox("Project Name", "Please Name new project folder")
+        Try
+            If (Not System.IO.Directory.Exists(NewFolderName)) Then
+                System.IO.Directory.CreateDirectory(NewFolderName)
+                MsgBox(NewFolderName & " created.")
+            Else
+                MsgBox("Folder " & NewFolderName & " exist!")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
+    End Sub
+
+    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
+        Settings.Show()
+    End Sub
+
 End Class

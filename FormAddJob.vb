@@ -72,45 +72,50 @@ Public Class FormAddJob
         Dim FolderName As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString
         Dim NewJobName As String = TextBox1.Text.ToString
         Dim NewFileName = FolderName & "\" & NewJobName & ".lmj"
-        If File.Exists(NewFileName) Then
-            MsgBox("File " & NewFileName & " Exist, Try another name.")
-        Else
-            File.WriteAllBytes(NewFileName, CType(My.Resources.ResourceManager.GetObject("Blank_job"), Byte()))
-
-            Dim doc As New Xml.XmlDocument
-            'load file 
-            doc.Load(NewFileName)
-            Dim root As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles")
-
-            If root Is Nothing Then
-                'if this is a new document create root 
-                root = doc.SelectSingleNode("//LMJob/LabelFiles")
+        Try
+            If File.Exists(NewFileName) Then
+                MsgBox("File " & NewFileName & " Exist, Try another name.")
             Else
-                'create node 
-                'get root node named users 
-                Dim Usersnode As Xml.XmlElement = doc.SelectSingleNode("//LMJob/LabelFiles")
-                'add the new node 
-                Dim newNode As Xml.XmlElement = doc.CreateElement("LabelFile")
-                'add attributes 
-                newNode.SetAttribute("Path", FolderName & "\Labels\" & TextBox2.Text & "\" & cmbLabels.SelectedItem.ToString & ".l5f")
-                newNode.SetAttribute("Printer", "CAB XD4M/300")
-                newNode.SetAttribute("NumberOfCopiesToPrint", TextBox2.Text)
-                newNode.SetAttribute("SideToPrint", "BothSides")
-                newNode.SetAttribute("StandardPrinting", "True")
-                newNode.SetAttribute("PartID", cmbLabels.SelectedItem.ToString)
-                newNode.SetAttribute("LabelsToPrint", "AllLabels")
-                newNode.SetAttribute("HorizontalPrinterPosition", "0")
-                newNode.SetAttribute("VerticalPrinterPosition", "0")
-                Usersnode.AppendChild(newNode)
+                File.WriteAllBytes(NewFileName, CType(My.Resources.ResourceManager.GetObject("Blank_job"), Byte()))
 
+                Dim doc As New Xml.XmlDocument
+                'load file 
+                doc.Load(NewFileName)
+                Dim root As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles")
+
+                If root Is Nothing Then
+                    'if this is a new document create root 
+                    root = doc.SelectSingleNode("//LMJob/LabelFiles")
+                Else
+                    'create node 
+                    'get root node named users 
+                    Dim Usersnode As Xml.XmlElement = doc.SelectSingleNode("//LMJob/LabelFiles")
+                    'add the new node 
+                    Dim newNode As Xml.XmlElement = doc.CreateElement("LabelFile")
+                    'add attributes 
+                    newNode.SetAttribute("Path", FolderName & "\Labels\" & TextBox1.Text & ".l5f")
+                    newNode.SetAttribute("Printer", "CAB XD4M/300")
+                    newNode.SetAttribute("NumberOfCopiesToPrint", TextBox2.Text)
+                    newNode.SetAttribute("SideToPrint", "BothSides")
+                    newNode.SetAttribute("StandardPrinting", "True")
+                    newNode.SetAttribute("PartID", cmbLabels.SelectedItem.ToString)
+                    newNode.SetAttribute("LabelsToPrint", "AllLabels")
+                    newNode.SetAttribute("HorizontalPrinterPosition", "0")
+                    newNode.SetAttribute("VerticalPrinterPosition", "0")
+                    Usersnode.AppendChild(newNode)
+
+                End If
+                'save doc 
+                doc.Save(NewFileName)
+                System.IO.Directory.CreateDirectory(FolderName & "\Labels\")
+                File.WriteAllBytes(FolderName & "\Labels\" & TextBox1.Text & ".l5f", CType(My.Resources.ResourceManager.GetObject("_" & cmbLabels.SelectedItem.ToString.Replace("-", "_")), Byte()))
+                MsgBox(NewJobName & " created, in " & FolderName)
+                Me.Close()
             End If
-            'save doc 
-            doc.Save(NewFileName)
-            System.IO.Directory.CreateDirectory(FolderName & "\Labels\" & TextBox1.Text)
-            File.WriteAllBytes(FolderName & "\Labels\" & TextBox1.Text & "\" & cmbLabels.SelectedItem.ToString & ".l5f", CType(My.Resources.ResourceManager.GetObject("_" & cmbLabels.SelectedItem.ToString.Replace("-", "_")), Byte()))
-            MsgBox(NewJobName & " created, in " & FolderName)
-            Me.Close()
-        End If
+        Catch ex As Exception
+            MsgBox(ex.Message.ToString)
+        End Try
+
 
     End Sub
 
