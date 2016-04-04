@@ -11,9 +11,7 @@ Public Class Form1
     Dim CurrentProject As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        BtnOpen.Enabled = False
-        BtnDlete.Enabled = False
-        BtnEdit.Enabled = False
+
         If Not Directory.Exists(MAIN_DIR_NAME) Then
             System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
         End If
@@ -80,27 +78,11 @@ Public Class Form1
     End Sub
 
     Private Sub LstJobs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJobs.SelectedIndexChanged
-        BtnOpen.Enabled = True
-        BtnDlete.Enabled = True
-        BtnEdit.Enabled = True
+
     End Sub
 
     Private Sub LstJobs_LostFocus(sender As Object, e As EventArgs) Handles LstJobs.LostFocus
-        If BtnOpen.Focused = False Then
-            BtnOpen.Enabled = False
-            BtnDlete.Enabled = False
-            BtnEdit.Enabled = False
-        End If
-        If BtnEdit.Focused = False Then
-            BtnOpen.Enabled = False
-            BtnDlete.Enabled = False
-            BtnEdit.Enabled = False
-        End If
-        If BtnDlete.Focused = False Then
-            BtnOpen.Enabled = False
-            BtnDlete.Enabled = False
-            BtnEdit.Enabled = False
-        End If
+
     End Sub
     'Start Buttons functions
     Private Sub BtnProject_Click(sender As Object, e As EventArgs) Handles BtnProject.Click
@@ -123,7 +105,7 @@ Public Class Form1
             Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\Labels\" & LstJobs.SelectedItem.ToString & ".l5f"
             System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
         Catch ex As Exception
-
+            MsgBox("Select label first")
         End Try
     End Sub
 
@@ -132,19 +114,24 @@ Public Class Form1
             Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
             System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
         Catch ex As Exception
-
+            MsgBox("Select label first")
         End Try
     End Sub
 
     Private Sub BtnDlete_Click(sender As Object, e As EventArgs) Handles BtnDlete.Click
-        Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
-        Dim SelectedRow As Integer = LstJobs.SelectedIndex
-        If System.IO.File.Exists(OpenFile) = True Then
-            LstJobs.Items.RemoveAt(SelectedRow)
-            System.IO.File.Delete(OpenFile)
-            MessageBox.Show("File Deleted")
+        Try
+            Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+            Dim SelectedRow As Integer = LstJobs.SelectedIndex
+            If System.IO.File.Exists(OpenFile) = True Then
+                LstJobs.Items.RemoveAt(SelectedRow)
+                System.IO.File.Delete(OpenFile)
+                MessageBox.Show("File Deleted")
 
-        End If
+            End If
+        Catch ex As Exception
+            MsgBox("Select label first")
+        End Try
+
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
