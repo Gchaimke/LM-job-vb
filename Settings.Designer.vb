@@ -28,6 +28,9 @@ Partial Class Settings
         Me.BtnFolder = New System.Windows.Forms.Button()
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.BtnCencel = New System.Windows.Forms.Button()
+        Me.BtnProgram = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -78,12 +81,40 @@ Partial Class Settings
         Me.BtnCencel.Text = "Cencel"
         Me.BtnCencel.UseVisualStyleBackColor = True
         '
+        'BtnProgram
+        '
+        Me.BtnProgram.Location = New System.Drawing.Point(419, 47)
+        Me.BtnProgram.Name = "BtnProgram"
+        Me.BtnProgram.Size = New System.Drawing.Size(41, 23)
+        Me.BtnProgram.TabIndex = 7
+        Me.BtnProgram.Text = "..."
+        Me.BtnProgram.UseVisualStyleBackColor = True
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(108, 49)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(305, 20)
+        Me.TextBox2.TabIndex = 6
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(12, 56)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(83, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Defoult Program"
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BtnCencel
         Me.ClientSize = New System.Drawing.Size(524, 261)
+        Me.Controls.Add(Me.BtnProgram)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnCencel)
         Me.Controls.Add(Me.BtnSave)
         Me.Controls.Add(Me.BtnFolder)
@@ -103,4 +134,7 @@ Partial Class Settings
     Friend WithEvents BtnFolder As Button
     Friend WithEvents BtnSave As Button
     Friend WithEvents BtnCencel As Button
+    Friend WithEvents BtnProgram As Button
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label2 As Label
 End Class
