@@ -4,8 +4,8 @@ Option Strict On
 Imports System.IO
 
 Public Class Form1
-    Private MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\LM-job"
-    Private LabelMarkPath As String = "C:\Program Files (x86)\Brady\LabelMark5\Bin\LM5.exe"
+    Private MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
+    Private LabelMarkPath As String = My.Settings.ProgramPath
     Dim SelectedPath As String()
     Dim ProjectsDir As String()
     Dim CurrentProject As String
@@ -66,6 +66,7 @@ Public Class Form1
     End Sub
 
     Private Sub LsbProjects_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LsbProjects.SelectedIndexChanged
+        My.Settings.Reload()
         LstJobs.Items.Clear() 'clear list before add new items
         Try
             CurrentProject = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString 'get current selected item from projects list
@@ -77,13 +78,6 @@ Public Class Form1
 
     End Sub
 
-    Private Sub LstJobs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJobs.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub LstJobs_LostFocus(sender As Object, e As EventArgs) Handles LstJobs.LostFocus
-
-    End Sub
     'Start Buttons functions
     Private Sub BtnProject_Click(sender As Object, e As EventArgs) Handles BtnProject.Click
         Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox("Project Name", "Please Name new project folder")

@@ -27,6 +27,7 @@ Partial Class Form1
         Me.NewProjectFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewJobFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,7 +38,6 @@ Partial Class Form1
         Me.BtnOpen = New System.Windows.Forms.Button()
         Me.BtnDlete = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -78,6 +78,12 @@ Partial Class Form1
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         Me.EditToolStripMenuItem.Size = New System.Drawing.Size(39, 20)
         Me.EditToolStripMenuItem.Text = "Edit"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'HelpToolStripMenuItem
         '
@@ -163,12 +169,6 @@ Partial Class Form1
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "New job file"
         Me.Button3.UseVisualStyleBackColor = True
-        '
-        'SettingsToolStripMenuItem
-        '
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'BtnEdit
         '

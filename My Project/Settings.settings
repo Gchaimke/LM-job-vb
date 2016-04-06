@@ -5,5 +5,8 @@
     <Setting Name="DefPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">\LM-job</Value>
     </Setting>
+    <Setting Name="ProgramPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Program Files (x86)\Brady\LabelMark5\Bin\LM5.exe</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

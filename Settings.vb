@@ -9,24 +9,30 @@
         My.Settings.DefPath = TextBox1.Text.Replace(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "").Trim
     End Sub
 
+    Private Sub BtnProgram_Click(sender As Object, e As EventArgs) Handles BtnProgram.Click
+        Dim filedialog As OpenFileDialog = New OpenFileDialog()
+        filedialog.Title = "Open File Dialog"
+        filedialog.InitialDirectory = "C:\Program Files (x86)\Brady"
+        filedialog.RestoreDirectory = True
+        If filedialog.ShowDialog() = DialogResult.OK Then
+            TextBox2.Text = filedialog.FileName
+            My.Settings.ProgramPath = filedialog.FileName
+        End If
+    End Sub
+
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         TextBox1.Text = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
+        TextBox2.Text = My.Settings.ProgramPath
     End Sub
 
     Private Sub BtnSave_Click(sender As Object, e As EventArgs) Handles BtnSave.Click
         My.Settings.Save()
+        Application.Restart()
         Me.Close()
+
     End Sub
 
-    Private Sub BtnProgram_Click(sender As Object, e As EventArgs) Handles BtnProgram.Click
-        Dim filedialog As OpenFileDialog = New OpenFileDialog()
-        Dim strFileName As String
-        filedialog.Title = "Open File Dialog"
-        filedialog.InitialDirectory = "W:\TOM\ERIC\NET Dev"
-        filedialog.RestoreDirectory = True
-        If filedialog.ShowDialog() = DialogResult.OK Then
-            TextBox2.Text = filedialog.FileName
-        End If
-
+    Private Sub BtnCencel_Click(sender As Object, e As EventArgs) Handles BtnCencel.Click
+        Me.Close()
     End Sub
 End Class
