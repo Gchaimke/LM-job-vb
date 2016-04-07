@@ -1,5 +1,5 @@
 ﻿Option Explicit On
-Option Strict On
+
 
 Imports System.IO
 
@@ -17,6 +17,13 @@ Public Class Form1
         End If
         If Not Directory.Exists(MAIN_DIR_NAME & "\Labels\") Then
             System.IO.Directory.CreateDirectory(MAIN_DIR_NAME & "\Labels\")
+            For Each ResourceFile As DictionaryEntry In My.Resources.ResourceManager.GetResourceSet(Globalization.CultureInfo.CurrentCulture, True, True).OfType(Of Object)()
+                If ResourceFile.Key Like "*3PS*" Then
+                    'MsgBox(ResourceFile.Key)   ' Resource Name
+                    File.WriteAllBytes(MAIN_DIR_NAME & "\Labels\" & ResourceFile.Key & ".l5f", CType(My.Resources.ResourceManager.GetObject(ResourceFile.Key), Byte()))
+                End If
+            Next
+
         End If
 
     End Sub

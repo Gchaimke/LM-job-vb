@@ -108,7 +108,7 @@ Public Class FormAddJob
                 'save doc 
                 doc.Save(NewFileName)
                 System.IO.Directory.CreateDirectory(FolderName & "\Labels\")
-                File.WriteAllBytes(FolderName & "\Labels\" & TextBox1.Text & ".l5f", CType(My.Resources.ResourceManager.GetObject("_" & cmbLabels.SelectedItem.ToString.Replace("-", "_")), Byte()))
+                File.WriteAllBytes(FolderName & "\Labels\" & TextBox1.Text & ".l5f", CType(My.Resources.ResourceManager.GetObject(cmbLabels.SelectedItem.ToString), Byte()))
                 MsgBox(NewJobName & " created, in " & FolderName)
                 Me.Close()
             End If
