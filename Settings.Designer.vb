@@ -31,6 +31,8 @@ Partial Class Settings
         Me.BtnProgram = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.TxbFileExt = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -48,6 +50,7 @@ Partial Class Settings
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(305, 20)
         Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = "\LM-job"
         '
         'FolderBrowserDialog1
         '
@@ -92,10 +95,12 @@ Partial Class Settings
         '
         'TextBox2
         '
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "ProgramPath", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
         Me.TextBox2.Location = New System.Drawing.Point(108, 49)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(305, 20)
         Me.TextBox2.TabIndex = 6
+        Me.TextBox2.Text = Global.LM_job.My.MySettings.Default.ProgramPath
         '
         'Label2
         '
@@ -106,12 +111,32 @@ Partial Class Settings
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Defoult Program"
         '
+        'TxbFileExt
+        '
+        Me.TxbFileExt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "FileExt", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.TxbFileExt.Location = New System.Drawing.Point(108, 80)
+        Me.TxbFileExt.Name = "TxbFileExt"
+        Me.TxbFileExt.Size = New System.Drawing.Size(305, 20)
+        Me.TxbFileExt.TabIndex = 9
+        Me.TxbFileExt.Text = Global.LM_job.My.MySettings.Default.FileExt
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 87)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(72, 13)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "File Extension"
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BtnCencel
         Me.ClientSize = New System.Drawing.Size(524, 261)
+        Me.Controls.Add(Me.TxbFileExt)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnProgram)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label2)
@@ -137,4 +162,6 @@ Partial Class Settings
     Friend WithEvents BtnProgram As Button
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents TxbFileExt As TextBox
+    Friend WithEvents Label3 As Label
 End Class

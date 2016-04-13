@@ -1,12 +1,12 @@
 ﻿Public Class Settings
     Private Sub BtnFolder_Click(sender As Object, e As EventArgs) Handles BtnFolder.Click
         Dim folderBrowser As New FolderBrowserDialog
-        folderBrowser.SelectedPath = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath    'Set the default selected folder path
+        folderBrowser.SelectedPath = My.Settings.DefPath    'Set the default selected folder path
 
         If (folderBrowser.ShowDialog() = DialogResult.OK) Then
             TextBox1.Text = folderBrowser.SelectedPath
         End If
-        My.Settings.DefPath = TextBox1.Text.Replace(My.Computer.FileSystem.SpecialDirectories.MyDocuments, "").Trim
+        My.Settings.DefPath = TextBox1.Text
     End Sub
 
     Private Sub BtnProgram_Click(sender As Object, e As EventArgs) Handles BtnProgram.Click
@@ -21,7 +21,7 @@
     End Sub
 
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        TextBox1.Text = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
+        TextBox1.Text = My.Settings.DefPath
         TextBox2.Text = My.Settings.ProgramPath
     End Sub
 

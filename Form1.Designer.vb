@@ -37,7 +37,7 @@ Partial Class Form1
         Me.BtnProject = New System.Windows.Forms.Button()
         Me.BtnOpen = New System.Windows.Forms.Button()
         Me.BtnDlete = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnNewJob = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -49,7 +49,7 @@ Partial Class Form1
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(432, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(676, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -94,7 +94,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(9, 81)
+        Me.Label1.Location = New System.Drawing.Point(12, 77)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
@@ -104,7 +104,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(9, 42)
+        Me.Label2.Location = New System.Drawing.Point(12, 38)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 13)
@@ -114,14 +114,14 @@ Partial Class Form1
         'LsbProjects
         '
         Me.LsbProjects.FormattingEnabled = True
-        Me.LsbProjects.Location = New System.Drawing.Point(9, 97)
+        Me.LsbProjects.Location = New System.Drawing.Point(12, 112)
         Me.LsbProjects.Name = "LsbProjects"
-        Me.LsbProjects.Size = New System.Drawing.Size(108, 160)
+        Me.LsbProjects.Size = New System.Drawing.Size(271, 225)
         Me.LsbProjects.TabIndex = 2
         '
         'TxbFilter1
         '
-        Me.TxbFilter1.Location = New System.Drawing.Point(9, 59)
+        Me.TxbFilter1.Location = New System.Drawing.Point(12, 54)
         Me.TxbFilter1.Name = "TxbFilter1"
         Me.TxbFilter1.Size = New System.Drawing.Size(108, 20)
         Me.TxbFilter1.TabIndex = 1
@@ -129,14 +129,14 @@ Partial Class Form1
         'LstJobs
         '
         Me.LstJobs.FormattingEnabled = True
-        Me.LstJobs.Location = New System.Drawing.Point(128, 97)
+        Me.LstJobs.Location = New System.Drawing.Point(289, 112)
         Me.LstJobs.Name = "LstJobs"
-        Me.LstJobs.Size = New System.Drawing.Size(145, 160)
+        Me.LstJobs.Size = New System.Drawing.Size(293, 225)
         Me.LstJobs.TabIndex = 3
         '
         'BtnProject
         '
-        Me.BtnProject.Location = New System.Drawing.Point(9, 263)
+        Me.BtnProject.Location = New System.Drawing.Point(12, 343)
         Me.BtnProject.Name = "BtnProject"
         Me.BtnProject.Size = New System.Drawing.Size(108, 23)
         Me.BtnProject.TabIndex = 4
@@ -145,7 +145,7 @@ Partial Class Form1
         '
         'BtnOpen
         '
-        Me.BtnOpen.Location = New System.Drawing.Point(279, 205)
+        Me.BtnOpen.Location = New System.Drawing.Point(588, 285)
         Me.BtnOpen.Name = "BtnOpen"
         Me.BtnOpen.Size = New System.Drawing.Size(75, 23)
         Me.BtnOpen.TabIndex = 6
@@ -154,25 +154,25 @@ Partial Class Form1
         '
         'BtnDlete
         '
-        Me.BtnDlete.Location = New System.Drawing.Point(279, 234)
+        Me.BtnDlete.Location = New System.Drawing.Point(588, 314)
         Me.BtnDlete.Name = "BtnDlete"
         Me.BtnDlete.Size = New System.Drawing.Size(75, 23)
         Me.BtnDlete.TabIndex = 7
         Me.BtnDlete.Text = "Delete"
         Me.BtnDlete.UseVisualStyleBackColor = True
         '
-        'Button3
+        'BtnNewJob
         '
-        Me.Button3.Location = New System.Drawing.Point(128, 263)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(145, 23)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "New job file"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnNewJob.Location = New System.Drawing.Point(289, 343)
+        Me.BtnNewJob.Name = "BtnNewJob"
+        Me.BtnNewJob.Size = New System.Drawing.Size(90, 23)
+        Me.BtnNewJob.TabIndex = 8
+        Me.BtnNewJob.Text = "New job file"
+        Me.BtnNewJob.UseVisualStyleBackColor = True
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(279, 176)
+        Me.BtnEdit.Location = New System.Drawing.Point(588, 256)
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
         Me.BtnEdit.TabIndex = 11
@@ -183,9 +183,9 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(432, 295)
+        Me.ClientSize = New System.Drawing.Size(676, 380)
         Me.Controls.Add(Me.BtnEdit)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.BtnNewJob)
         Me.Controls.Add(Me.BtnDlete)
         Me.Controls.Add(Me.BtnOpen)
         Me.Controls.Add(Me.BtnProject)
@@ -220,7 +220,7 @@ Partial Class Form1
     Friend WithEvents BtnDlete As Button
     Friend WithEvents NewProjectFolderToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NewJobFileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnNewJob As Button
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnEdit As Button
 End Class

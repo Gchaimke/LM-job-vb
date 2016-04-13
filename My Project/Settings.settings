@@ -3,10 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="DefPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\LM-job</Value>
+      <Value Profile="(Default)">C:\Users\michaelk\Documents\LM-job</Value>
     </Setting>
     <Setting Name="ProgramPath" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\Program Files (x86)\Brady\LabelMark5\Bin\LM5.exe</Value>
+    </Setting>
+    <Setting Name="FileExt" Type="System.String" Scope="User">
+      <Value Profile="(Default)">l5f</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -4,27 +4,32 @@
 Imports System.IO
 
 Public Class Form1
-    Private MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
+    Public MAIN_DIR_NAME As String = My.Settings.DefPath
+    Public MAIN_LABELS_DIR As String = MAIN_DIR_NAME & "\Labels\"
     Private LabelMarkPath As String = My.Settings.ProgramPath
     Dim SelectedPath As String()
     Dim ProjectsDir As String()
     Dim CurrentProject As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            MsgBox(MAIN_DIR_NAME)
+            If Not Directory.Exists(MAIN_DIR_NAME) Then
+                System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
+            End If
+            If Not Directory.Exists(MAIN_LABELS_DIR) Then
+                System.IO.Directory.CreateDirectory(MAIN_LABELS_DIR)
+                For Each ResourceFile As DictionaryEntry In My.Resources.ResourceManager.GetResourceSet(Globalization.CultureInfo.CurrentCulture, True, True).OfType(Of Object)()
+                    If ResourceFile.Key Like "*3PS*" Then
+                        File.WriteAllBytes(MAIN_LABELS_DIR & ResourceFile.Key & "." & My.Settings.FileExt, CType(My.Resources.ResourceManager.GetObject(ResourceFile.Key), Byte()))
+                    End If
+                Next
 
-        If Not Directory.Exists(MAIN_DIR_NAME) Then
-            System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
-        End If
-        If Not Directory.Exists(MAIN_DIR_NAME & "\Labels\") Then
-            System.IO.Directory.CreateDirectory(MAIN_DIR_NAME & "\Labels\")
-            For Each ResourceFile As DictionaryEntry In My.Resources.ResourceManager.GetResourceSet(Globalization.CultureInfo.CurrentCulture, True, True).OfType(Of Object)()
-                If ResourceFile.Key Like "*3PS*" Then
-                    'MsgBox(ResourceFile.Key)   ' Resource Name
-                    File.WriteAllBytes(MAIN_DIR_NAME & "\Labels\" & ResourceFile.Key & ".l5f", CType(My.Resources.ResourceManager.GetObject(ResourceFile.Key), Byte()))
-                End If
-            Next
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
-        End If
 
     End Sub
     'Main Sub
@@ -80,9 +85,7 @@ Public Class Form1
             SelectedPath = Directory.GetFiles(CurrentProject) 'show all files in the current directory
             Main(SelectedPath)
         Catch ex As Exception
-            MsgBox(ex.Message.ToString)
         End Try
-
     End Sub
 
     'Start Buttons functions
@@ -98,12 +101,11 @@ Public Class Form1
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
         End Try
-
     End Sub
 
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Try
-            Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\Labels\" & LstJobs.SelectedItem.ToString & ".l5f"
+            Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\Labels\" & LstJobs.SelectedItem.ToString & "." & My.Settings.FileExt
             System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
         Catch ex As Exception
             MsgBox("Select label first")
@@ -127,16 +129,20 @@ Public Class Form1
                 LstJobs.Items.RemoveAt(SelectedRow)
                 System.IO.File.Delete(OpenFile)
                 MessageBox.Show("File Deleted")
-
             End If
         Catch ex As Exception
             MsgBox("Select label first")
         End Try
-
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        FormAddJob.Show()
+    Private Sub BtnNewJob_Click(sender As Object, e As EventArgs) Handles BtnNewJob.Click
+        If LsbProjects.SelectedIndex < 0 Then
+            MsgBox("select Project first")
+
+        Else
+            FormAddJob.Show()
+        End If
+
     End Sub
     'Start Menu Buttons 
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
@@ -149,7 +155,7 @@ Public Class Form1
             If (Not System.IO.Directory.Exists(NewFolderName)) Then
                 System.IO.Directory.CreateDirectory(NewFolderName)
                 MsgBox(NewFolderName & " created.")
-            Else
+            ElseIf NewFolderName = "" Then
                 MsgBox("Folder " & NewFolderName & " exist!")
             End If
         Catch ex As Exception

@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("\LM-job")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\Users\michaelk\Documents\LM-job")>  _
         Public Property DefPath() As String
             Get
                 Return CType(Me("DefPath"),String)
@@ -75,6 +75,18 @@ Namespace My
             End Get
             Set
                 Me("ProgramPath") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("l5f")>  _
+        Public Property FileExt() As String
+            Get
+                Return CType(Me("FileExt"),String)
+            End Get
+            Set
+                Me("FileExt") = value
             End Set
         End Property
     End Class
