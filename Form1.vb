@@ -4,7 +4,7 @@
 Imports System.IO
 
 Public Class Form1
-    Public MAIN_DIR_NAME As String = My.Settings.DefPath
+    Public MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
     Public MAIN_LABELS_DIR As String = MAIN_DIR_NAME & "\Labels\"
     Private LabelMarkPath As String = My.Settings.ProgramPath
     Dim SelectedPath As String()
@@ -13,7 +13,6 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-            MsgBox(MAIN_DIR_NAME)
             If Not Directory.Exists(MAIN_DIR_NAME) Then
                 System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
             End If
@@ -24,12 +23,10 @@ Public Class Form1
                         File.WriteAllBytes(MAIN_LABELS_DIR & ResourceFile.Key & "." & My.Settings.FileExt, CType(My.Resources.ResourceManager.GetObject(ResourceFile.Key), Byte()))
                     End If
                 Next
-
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
 
     End Sub
     'Main Sub
@@ -108,7 +105,13 @@ Public Class Form1
             Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\Labels\" & LstJobs.SelectedItem.ToString & "." & My.Settings.FileExt
             System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
         Catch ex As Exception
-            MsgBox("Select label first")
+
+            If Not File.Exists(My.Settings.ProgramPath) Then
+                MsgBox("Install or select editing program first")
+                Settings.Show()
+            Else
+                MsgBox("Select label first")
+            End If
         End Try
     End Sub
 
@@ -117,19 +120,29 @@ Public Class Form1
             Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
             System.Diagnostics.Process.Start(LabelMarkPath, OpenFile)
         Catch ex As Exception
-            MsgBox("Select label first")
+
+            If Not File.Exists(My.Settings.ProgramPath) Then
+                MsgBox("Install or select editing program first")
+                Settings.Show()
+            Else
+                MsgBox("Select label first")
+            End If
+
         End Try
     End Sub
 
     Private Sub BtnDlete_Click(sender As Object, e As EventArgs) Handles BtnDlete.Click
         Try
-            Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+            Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+            Dim selectedLabel As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\Labels\" & LstJobs.SelectedItem.ToString & "." & My.Settings.FileExt
             Dim SelectedRow As Integer = LstJobs.SelectedIndex
-            If System.IO.File.Exists(OpenFile) = True Then
+            If System.IO.File.Exists(selectedFile) = True Then
                 LstJobs.Items.RemoveAt(SelectedRow)
-                System.IO.File.Delete(OpenFile)
+                System.IO.File.Delete(selectedFile)
+                System.IO.File.Delete(selectedLabel)
                 MessageBox.Show("File Deleted")
             End If
+
         Catch ex As Exception
             MsgBox("Select label first")
         End Try

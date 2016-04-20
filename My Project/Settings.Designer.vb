@@ -56,7 +56,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Users\michaelk\Documents\LM-job")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("\LM-job")>  _
         Public Property DefPath() As String
             Get
                 Return CType(Me("DefPath"),String)

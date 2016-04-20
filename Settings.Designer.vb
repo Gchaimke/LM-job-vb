@@ -23,16 +23,16 @@ Partial Class Settings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
-        Me.BtnFolder = New System.Windows.Forms.Button()
         Me.BtnSave = New System.Windows.Forms.Button()
         Me.BtnCencel = New System.Windows.Forms.Button()
         Me.BtnProgram = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TxbFileExt = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxbFileExt = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.BtnReset = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -44,26 +44,9 @@ Partial Class Settings
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Projects Folder"
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(108, 20)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(305, 20)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "\LM-job"
-        '
         'FolderBrowserDialog1
         '
         Me.FolderBrowserDialog1.RootFolder = System.Environment.SpecialFolder.MyDocuments
-        '
-        'BtnFolder
-        '
-        Me.BtnFolder.Location = New System.Drawing.Point(419, 18)
-        Me.BtnFolder.Name = "BtnFolder"
-        Me.BtnFolder.Size = New System.Drawing.Size(41, 23)
-        Me.BtnFolder.TabIndex = 2
-        Me.BtnFolder.Text = "..."
-        Me.BtnFolder.UseVisualStyleBackColor = True
         '
         'BtnSave
         '
@@ -93,15 +76,6 @@ Partial Class Settings
         Me.BtnProgram.Text = "..."
         Me.BtnProgram.UseVisualStyleBackColor = True
         '
-        'TextBox2
-        '
-        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "ProgramPath", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.TextBox2.Location = New System.Drawing.Point(108, 49)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(305, 20)
-        Me.TextBox2.TabIndex = 6
-        Me.TextBox2.Text = Global.LM_job.My.MySettings.Default.ProgramPath
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -110,15 +84,6 @@ Partial Class Settings
         Me.Label2.Size = New System.Drawing.Size(83, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Defoult Program"
-        '
-        'TxbFileExt
-        '
-        Me.TxbFileExt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "FileExt", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.TxbFileExt.Location = New System.Drawing.Point(108, 80)
-        Me.TxbFileExt.Name = "TxbFileExt"
-        Me.TxbFileExt.Size = New System.Drawing.Size(305, 20)
-        Me.TxbFileExt.TabIndex = 9
-        Me.TxbFileExt.Text = Global.LM_job.My.MySettings.Default.FileExt
         '
         'Label3
         '
@@ -129,12 +94,50 @@ Partial Class Settings
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "File Extension"
         '
+        'TxbFileExt
+        '
+        Me.TxbFileExt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "FileExt", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.TxbFileExt.Location = New System.Drawing.Point(108, 80)
+        Me.TxbFileExt.Name = "TxbFileExt"
+        Me.TxbFileExt.Size = New System.Drawing.Size(305, 20)
+        Me.TxbFileExt.TabIndex = 9
+        Me.TxbFileExt.Text = Global.LM_job.My.MySettings.Default.FileExt
+        '
+        'TextBox2
+        '
+        Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "ProgramPath", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.TextBox2.Location = New System.Drawing.Point(108, 49)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(305, 20)
+        Me.TextBox2.TabIndex = 6
+        Me.TextBox2.Text = Global.LM_job.My.MySettings.Default.ProgramPath
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(105, 27)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(39, 13)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "Label4"
+        '
+        'BtnReset
+        '
+        Me.BtnReset.Location = New System.Drawing.Point(221, 226)
+        Me.BtnReset.Name = "BtnReset"
+        Me.BtnReset.Size = New System.Drawing.Size(75, 23)
+        Me.BtnReset.TabIndex = 11
+        Me.BtnReset.Text = "Reset"
+        Me.BtnReset.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BtnCencel
         Me.ClientSize = New System.Drawing.Size(524, 261)
+        Me.Controls.Add(Me.BtnReset)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TxbFileExt)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnProgram)
@@ -142,11 +145,9 @@ Partial Class Settings
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.BtnCencel)
         Me.Controls.Add(Me.BtnSave)
-        Me.Controls.Add(Me.BtnFolder)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Settings"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Settings"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -154,9 +155,7 @@ Partial Class Settings
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
     Friend WithEvents FolderBrowserDialog1 As FolderBrowserDialog
-    Friend WithEvents BtnFolder As Button
     Friend WithEvents BtnSave As Button
     Friend WithEvents BtnCencel As Button
     Friend WithEvents BtnProgram As Button
@@ -164,4 +163,6 @@ Partial Class Settings
     Friend WithEvents Label2 As Label
     Friend WithEvents TxbFileExt As TextBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents BtnReset As Button
 End Class
