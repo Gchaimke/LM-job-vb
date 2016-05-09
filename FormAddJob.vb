@@ -97,7 +97,6 @@ Public Class FormAddJob
             MsgBox(ex.Message.ToString)
         End Try
 
-
     End Sub
 
 End Class

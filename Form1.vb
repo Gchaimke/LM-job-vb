@@ -76,12 +76,14 @@ Public Class Form1
     End Sub
 
     Private Sub LsbProjects_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LsbProjects.SelectedIndexChanged
-        My.Settings.Reload()
         LstJobs.Items.Clear() 'clear list before add new items
         Try
-            CurrentProject = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString 'get current selected item from projects list
-            SelectedPath = Directory.GetFiles(CurrentProject) 'show all files in the current directory
-            Main(SelectedPath)
+            If LsbProjects.SelectedIndex >= 0 Then
+                CurrentProject = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString 'get current selected item from projects list
+                SelectedPath = Directory.GetFiles(CurrentProject) 'show all files in the current directory
+                Main(SelectedPath)
+            End If
+
         Catch ex As Exception
         End Try
     End Sub
@@ -152,11 +154,10 @@ Public Class Form1
     Private Sub BtnNewJob_Click(sender As Object, e As EventArgs) Handles BtnNewJob.Click
         If LsbProjects.SelectedIndex < 0 Then
             MsgBox("select Project first")
-
         Else
             FormAddJob.Show()
         End If
-
+        LsbProjects.Focus()
     End Sub
     'Start Menu Buttons 
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
@@ -182,13 +183,43 @@ Public Class Form1
     End Sub
 
     Private Sub LstJobs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJobs.SelectedIndexChanged
+        Try
+            If LstJobs.SelectedIndex >= 0 Then
+                Dim doc As New XmlDocument
+                Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+                doc.Load(selectedFile)
+                Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
+                LblPrinter.Text = "Printer: " & attribute.Attributes("Printer").Value
+                LblDetals.Text = "Label ID: " & attribute.Attributes("PartID").Value
+                LblCopies.Text = "Copies: " & attribute.Attributes("NumberOfCopiesToPrint").Value
+                LblPath.Text = "Path: " & attribute.Attributes("Path").Value
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim message, title, defaultValue As String
+        Dim myValue As Object
         Dim doc As New XmlDocument
         Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
         doc.Load(selectedFile)
+        Dim Usersnode As Xml.XmlElement = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
+
+        ' Set prompt.
+        message = "Enter a number of copies"
+        ' Set title.
+        title = "Edit Copies"
+        ' Set default value.
         Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
-        LblPrinter.Text = "Printer: " & attribute.Attributes("Printer").Value
-        LblDetals.Text = "Label ID: " & attribute.Attributes("PartID").Value
-        LblCopies.Text = "Copies: " & attribute.Attributes("NumberOfCopiesToPrint").Value
-        LblPath.Text = "Path: " & attribute.Attributes("Path").Value
+        defaultValue = attribute.Attributes("NumberOfCopiesToPrint").Value
+
+        ' Display message, title, and default value.
+        myValue = InputBox(message, title, defaultValue)
+        ' If user has clicked Cancel, set myValue to defaultValue 
+        If myValue Is "" Then myValue = defaultValue
+        Usersnode.SetAttribute("NumberOfCopiesToPrint", myValue)
+        'save doc 
+        doc.Save(selectedFile)
     End Sub
 End Class
