@@ -43,7 +43,7 @@ Partial Class Form1
         Me.LblCopies = New System.Windows.Forms.Label()
         Me.LblPrinter = New System.Windows.Forms.Label()
         Me.LblPath = New System.Windows.Forms.Label()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -196,7 +196,7 @@ Partial Class Form1
         'LblCopies
         '
         Me.LblCopies.AutoSize = True
-        Me.LblCopies.Location = New System.Drawing.Point(400, 202)
+        Me.LblCopies.Location = New System.Drawing.Point(400, 158)
         Me.LblCopies.Name = "LblCopies"
         Me.LblCopies.Size = New System.Drawing.Size(48, 13)
         Me.LblCopies.TabIndex = 13
@@ -214,26 +214,28 @@ Partial Class Form1
         'LblPath
         '
         Me.LblPath.AutoSize = True
-        Me.LblPath.Location = New System.Drawing.Point(400, 158)
+        Me.LblPath.Location = New System.Drawing.Point(400, 179)
         Me.LblPath.MaximumSize = New System.Drawing.Size(250, 0)
         Me.LblPath.Name = "LblPath"
         Me.LblPath.Size = New System.Drawing.Size(38, 13)
         Me.LblPath.TabIndex = 15
         Me.LblPath.Text = "Path : "
         '
-        'MaskedTextBox1
+        'Button1
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(454, 195)
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.MaskedTextBox1.TabIndex = 16
+        Me.Button1.Location = New System.Drawing.Point(501, 155)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(60, 23)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "change"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(698, 380)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.LblPath)
         Me.Controls.Add(Me.LblPrinter)
         Me.Controls.Add(Me.LblCopies)
@@ -281,5 +283,5 @@ Partial Class Form1
     Friend WithEvents LblCopies As Label
     Friend WithEvents LblPrinter As Label
     Friend WithEvents LblPath As Label
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents Button1 As Button
 End Class

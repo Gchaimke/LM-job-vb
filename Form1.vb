@@ -186,12 +186,9 @@ Public Class Form1
         Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
         doc.Load(selectedFile)
         Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
-        LblPrinter.Text = "Printer :" & attribute.Attributes("Printer").Value
-        LblDetals.Text = "Label ID :" & attribute.Attributes("PartID").Value
-        LblCopies.Text = "Copies :" & attribute.Attributes("NumberOfCopiesToPrint").Value
-        LblPath.Text = "Path :" & attribute.Attributes("Path").Value
-
-
-
+        LblPrinter.Text = "Printer: " & attribute.Attributes("Printer").Value
+        LblDetals.Text = "Label ID: " & attribute.Attributes("PartID").Value
+        LblCopies.Text = "Copies: " & attribute.Attributes("NumberOfCopiesToPrint").Value
+        LblPath.Text = "Path: " & attribute.Attributes("Path").Value
     End Sub
 End Class
