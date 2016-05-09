@@ -2,6 +2,7 @@
 
 
 Imports System.IO
+Imports System.Xml
 
 Public Class Form1
     Public MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
@@ -180,4 +181,17 @@ Public Class Form1
         Settings.Show()
     End Sub
 
+    Private Sub LstJobs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJobs.SelectedIndexChanged
+        Dim doc As New XmlDocument
+        Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+        doc.Load(selectedFile)
+        Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
+        LblPrinter.Text = "Printer :" & attribute.Attributes("Printer").Value
+        LblDetals.Text = "Label ID :" & attribute.Attributes("PartID").Value
+        LblCopies.Text = "Copies :" & attribute.Attributes("NumberOfCopiesToPrint").Value
+        LblPath.Text = "Path :" & attribute.Attributes("Path").Value
+
+
+
+    End Sub
 End Class

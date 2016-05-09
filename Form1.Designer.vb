@@ -39,6 +39,11 @@ Partial Class Form1
         Me.BtnDlete = New System.Windows.Forms.Button()
         Me.BtnNewJob = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.LblDetals = New System.Windows.Forms.Label()
+        Me.LblCopies = New System.Windows.Forms.Label()
+        Me.LblPrinter = New System.Windows.Forms.Label()
+        Me.LblPath = New System.Windows.Forms.Label()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,7 +54,7 @@ Partial Class Form1
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(676, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(698, 24)
         Me.MenuStrip1.TabIndex = 4
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -116,7 +121,7 @@ Partial Class Form1
         Me.LsbProjects.FormattingEnabled = True
         Me.LsbProjects.Location = New System.Drawing.Point(12, 112)
         Me.LsbProjects.Name = "LsbProjects"
-        Me.LsbProjects.Size = New System.Drawing.Size(271, 225)
+        Me.LsbProjects.Size = New System.Drawing.Size(171, 225)
         Me.LsbProjects.TabIndex = 2
         '
         'TxbFilter1
@@ -129,9 +134,9 @@ Partial Class Form1
         'LstJobs
         '
         Me.LstJobs.FormattingEnabled = True
-        Me.LstJobs.Location = New System.Drawing.Point(289, 112)
+        Me.LstJobs.Location = New System.Drawing.Point(189, 112)
         Me.LstJobs.Name = "LstJobs"
-        Me.LstJobs.Size = New System.Drawing.Size(293, 225)
+        Me.LstJobs.Size = New System.Drawing.Size(190, 225)
         Me.LstJobs.TabIndex = 3
         '
         'BtnProject
@@ -145,25 +150,25 @@ Partial Class Form1
         '
         'BtnOpen
         '
-        Me.BtnOpen.Location = New System.Drawing.Point(588, 285)
+        Me.BtnOpen.Location = New System.Drawing.Point(585, 233)
         Me.BtnOpen.Name = "BtnOpen"
         Me.BtnOpen.Size = New System.Drawing.Size(75, 23)
         Me.BtnOpen.TabIndex = 6
-        Me.BtnOpen.Text = "Open"
+        Me.BtnOpen.Text = "Print"
         Me.BtnOpen.UseVisualStyleBackColor = True
         '
         'BtnDlete
         '
-        Me.BtnDlete.Location = New System.Drawing.Point(588, 314)
+        Me.BtnDlete.Location = New System.Drawing.Point(491, 233)
         Me.BtnDlete.Name = "BtnDlete"
-        Me.BtnDlete.Size = New System.Drawing.Size(75, 23)
+        Me.BtnDlete.Size = New System.Drawing.Size(88, 23)
         Me.BtnDlete.TabIndex = 7
-        Me.BtnDlete.Text = "Delete"
+        Me.BtnDlete.Text = "Delete Label"
         Me.BtnDlete.UseVisualStyleBackColor = True
         '
         'BtnNewJob
         '
-        Me.BtnNewJob.Location = New System.Drawing.Point(289, 343)
+        Me.BtnNewJob.Location = New System.Drawing.Point(189, 345)
         Me.BtnNewJob.Name = "BtnNewJob"
         Me.BtnNewJob.Size = New System.Drawing.Size(90, 23)
         Me.BtnNewJob.TabIndex = 8
@@ -172,18 +177,67 @@ Partial Class Form1
         '
         'BtnEdit
         '
-        Me.BtnEdit.Location = New System.Drawing.Point(588, 256)
+        Me.BtnEdit.Location = New System.Drawing.Point(403, 233)
         Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.Size = New System.Drawing.Size(75, 23)
+        Me.BtnEdit.Size = New System.Drawing.Size(82, 23)
         Me.BtnEdit.TabIndex = 11
-        Me.BtnEdit.Text = "Edit"
+        Me.BtnEdit.Text = "Edit Label"
         Me.BtnEdit.UseVisualStyleBackColor = True
+        '
+        'LblDetals
+        '
+        Me.LblDetals.AutoSize = True
+        Me.LblDetals.Location = New System.Drawing.Point(400, 134)
+        Me.LblDetals.Name = "LblDetals"
+        Me.LblDetals.Size = New System.Drawing.Size(56, 13)
+        Me.LblDetals.TabIndex = 12
+        Me.LblDetals.Text = "Label ID : "
+        '
+        'LblCopies
+        '
+        Me.LblCopies.AutoSize = True
+        Me.LblCopies.Location = New System.Drawing.Point(400, 202)
+        Me.LblCopies.Name = "LblCopies"
+        Me.LblCopies.Size = New System.Drawing.Size(48, 13)
+        Me.LblCopies.TabIndex = 13
+        Me.LblCopies.Text = "Copies : "
+        '
+        'LblPrinter
+        '
+        Me.LblPrinter.AutoSize = True
+        Me.LblPrinter.Location = New System.Drawing.Point(400, 112)
+        Me.LblPrinter.Name = "LblPrinter"
+        Me.LblPrinter.Size = New System.Drawing.Size(46, 13)
+        Me.LblPrinter.TabIndex = 14
+        Me.LblPrinter.Text = "Printer : "
+        '
+        'LblPath
+        '
+        Me.LblPath.AutoSize = True
+        Me.LblPath.Location = New System.Drawing.Point(400, 158)
+        Me.LblPath.MaximumSize = New System.Drawing.Size(250, 0)
+        Me.LblPath.Name = "LblPath"
+        Me.LblPath.Size = New System.Drawing.Size(38, 13)
+        Me.LblPath.TabIndex = 15
+        Me.LblPath.Text = "Path : "
+        '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(454, 195)
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.MaskedTextBox1.TabIndex = 16
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(676, 380)
+        Me.ClientSize = New System.Drawing.Size(698, 380)
+        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.LblPath)
+        Me.Controls.Add(Me.LblPrinter)
+        Me.Controls.Add(Me.LblCopies)
+        Me.Controls.Add(Me.LblDetals)
         Me.Controls.Add(Me.BtnEdit)
         Me.Controls.Add(Me.BtnNewJob)
         Me.Controls.Add(Me.BtnDlete)
@@ -223,4 +277,9 @@ Partial Class Form1
     Friend WithEvents BtnNewJob As Button
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnEdit As Button
+    Friend WithEvents LblDetals As Label
+    Friend WithEvents LblCopies As Label
+    Friend WithEvents LblPrinter As Label
+    Friend WithEvents LblPath As Label
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
 End Class
