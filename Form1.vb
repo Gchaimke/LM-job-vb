@@ -21,7 +21,8 @@ Public Class Form1
                 System.IO.Directory.CreateDirectory(MAIN_LABELS_DIR)
                 For Each ResourceFile As DictionaryEntry In My.Resources.ResourceManager.GetResourceSet(Globalization.CultureInfo.CurrentCulture, True, True).OfType(Of Object)()
                     If ResourceFile.Key Like "*3PS*" Then
-                        File.WriteAllBytes(MAIN_LABELS_DIR & ResourceFile.Key & "." & My.Settings.FileExt, CType(My.Resources.ResourceManager.GetObject(ResourceFile.Key), Byte()))
+                        Dim fileName As String = ResourceFile.Key.Replace("_", "-")
+                        File.WriteAllBytes(MAIN_LABELS_DIR & fileName.TrimStart("-") & "." & My.Settings.FileExt, CType(My.Resources.ResourceManager.GetObject(ResourceFile.Key), Byte()))
                     End If
                 Next
             End If
