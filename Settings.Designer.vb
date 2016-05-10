@@ -22,6 +22,7 @@ Partial Class Settings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
         Me.BtnSave = New System.Windows.Forms.Button()
@@ -29,20 +30,18 @@ Partial Class Settings
         Me.BtnProgram = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TxbFileExt = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BtnReset = New System.Windows.Forms.Button()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.TxbFileExt = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 27)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Projects Folder"
         '
         'FolderBrowserDialog1
         '
@@ -50,92 +49,79 @@ Partial Class Settings
         '
         'BtnSave
         '
-        Me.BtnSave.Location = New System.Drawing.Point(12, 226)
+        resources.ApplyResources(Me.BtnSave, "BtnSave")
         Me.BtnSave.Name = "BtnSave"
-        Me.BtnSave.Size = New System.Drawing.Size(75, 23)
-        Me.BtnSave.TabIndex = 3
-        Me.BtnSave.Text = "Save"
         Me.BtnSave.UseVisualStyleBackColor = True
         '
         'BtnCencel
         '
         Me.BtnCencel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.BtnCencel.Location = New System.Drawing.Point(437, 226)
+        resources.ApplyResources(Me.BtnCencel, "BtnCencel")
         Me.BtnCencel.Name = "BtnCencel"
-        Me.BtnCencel.Size = New System.Drawing.Size(75, 23)
-        Me.BtnCencel.TabIndex = 4
-        Me.BtnCencel.Text = "Cencel"
         Me.BtnCencel.UseVisualStyleBackColor = True
         '
         'BtnProgram
         '
-        Me.BtnProgram.Location = New System.Drawing.Point(419, 47)
+        resources.ApplyResources(Me.BtnProgram, "BtnProgram")
         Me.BtnProgram.Name = "BtnProgram"
-        Me.BtnProgram.Size = New System.Drawing.Size(41, 23)
-        Me.BtnProgram.TabIndex = 7
-        Me.BtnProgram.Text = "..."
         Me.BtnProgram.UseVisualStyleBackColor = True
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 56)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(83, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Defoult Program"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 87)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(72, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "File Extension"
+        '
+        'Label4
+        '
+        resources.ApplyResources(Me.Label4, "Label4")
+        Me.Label4.Name = "Label4"
+        '
+        'BtnReset
+        '
+        resources.ApplyResources(Me.BtnReset, "BtnReset")
+        Me.BtnReset.Name = "BtnReset"
+        Me.BtnReset.UseVisualStyleBackColor = True
+        '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.Name = "Label5"
         '
         'TxbFileExt
         '
         Me.TxbFileExt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "FileExt", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.TxbFileExt.Location = New System.Drawing.Point(108, 80)
+        resources.ApplyResources(Me.TxbFileExt, "TxbFileExt")
         Me.TxbFileExt.Name = "TxbFileExt"
-        Me.TxbFileExt.Size = New System.Drawing.Size(305, 20)
-        Me.TxbFileExt.TabIndex = 9
         Me.TxbFileExt.Text = Global.LM_job.My.MySettings.Default.FileExt
         '
         'TextBox2
         '
         Me.TextBox2.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "ProgramPath", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.TextBox2.Location = New System.Drawing.Point(108, 49)
+        resources.ApplyResources(Me.TextBox2, "TextBox2")
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(305, 20)
-        Me.TextBox2.TabIndex = 6
         Me.TextBox2.Text = Global.LM_job.My.MySettings.Default.ProgramPath
         '
-        'Label4
+        'ComboBox1
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(105, 27)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 13)
-        Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Label4"
-        '
-        'BtnReset
-        '
-        Me.BtnReset.Location = New System.Drawing.Point(221, 226)
-        Me.BtnReset.Name = "BtnReset"
-        Me.BtnReset.Size = New System.Drawing.Size(75, 23)
-        Me.BtnReset.TabIndex = 11
-        Me.BtnReset.Text = "Reset"
-        Me.BtnReset.UseVisualStyleBackColor = True
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "language", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1")})
+        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Text = Global.LM_job.My.MySettings.Default.language
         '
         'Settings
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BtnCencel
-        Me.ClientSize = New System.Drawing.Size(524, 261)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnReset)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TxbFileExt)
@@ -147,8 +133,7 @@ Partial Class Settings
         Me.Controls.Add(Me.BtnSave)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Settings"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Settings"
+        Me.Text = Global.LM_job.My.MySettings.Default.ProgramPath
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -165,4 +150,6 @@ Partial Class Settings
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnReset As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

@@ -3,6 +3,8 @@
 
 Imports System.IO
 Imports System.Xml
+Imports System.Threading
+Imports System.Globalization
 
 Public Class Form1
     Public MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
@@ -13,6 +15,7 @@ Public Class Form1
     Dim CurrentProject As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         Try
             If Not Directory.Exists(MAIN_DIR_NAME) Then
                 System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
@@ -199,28 +202,61 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim message, title, defaultValue As String
-        Dim myValue As Object
-        Dim doc As New XmlDocument
-        Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
-        doc.Load(selectedFile)
-        Dim Usersnode As Xml.XmlElement = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
+        Try
+            If LsbProjects.SelectedIndex >= 0 Then
+                Dim message, title, defaultValue As String
+                Dim myValue As Object
+                Dim doc As New XmlDocument
+                Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
+                doc.Load(selectedFile)
+                Dim Usersnode As Xml.XmlElement = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
 
-        ' Set prompt.
-        message = "Enter a number of copies"
-        ' Set title.
-        title = "Edit Copies"
-        ' Set default value.
-        Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
-        defaultValue = attribute.Attributes("NumberOfCopiesToPrint").Value
+                ' Set prompt.
+                message = "Enter a number of copies"
+                ' Set title.
+                title = "Edit Copies"
+                ' Set default value.
+                Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
+                defaultValue = attribute.Attributes("NumberOfCopiesToPrint").Value
 
-        ' Display message, title, and default value.
-        myValue = InputBox(message, title, defaultValue)
-        ' If user has clicked Cancel, set myValue to defaultValue 
-        If myValue Is "" Then myValue = defaultValue
-        Usersnode.SetAttribute("NumberOfCopiesToPrint", myValue)
-        'save doc 
-        doc.Save(selectedFile)
+                ' Display message, title, and default value.
+                myValue = InputBox(message, title, defaultValue)
+                ' If user has clicked Cancel, set myValue to defaultValue 
+                If myValue Is "" Then myValue = defaultValue
+                Usersnode.SetAttribute("NumberOfCopiesToPrint", myValue)
+                'save doc 
+                doc.Save(selectedFile)
+            End If
+
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 
+    Private Sub HebrewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HebrewToolStripMenuItem.Click
+        ' Sets the culture to UK English
+        Thread.CurrentThread.CurrentCulture = New CultureInfo("he-IL")
+        ' Sets the UI culture to UK English
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo("he-IL")
+
+        Dim frmMain As New Form1
+        frmMain.Show()
+
+        Me.Close()
+        Me.Dispose()
+    End Sub
+
+    Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
+        ' Sets the culture to UK English
+        Thread.CurrentThread.CurrentCulture = New CultureInfo("en")
+        ' Sets the UI culture to UK English
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo("en")
+
+        Dim frmMain As New Form1
+        frmMain.Show()
+
+        Me.Close()
+        Me.Dispose()
+    End Sub
 End Class

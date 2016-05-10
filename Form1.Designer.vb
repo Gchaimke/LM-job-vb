@@ -29,6 +29,9 @@ Partial Class Form1
         Me.NewJobFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LanguageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HebrewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -74,13 +77,29 @@ Partial Class Form1
         'EditToolStripMenuItem
         '
         resources.ApplyResources(Me.EditToolStripMenuItem, "EditToolStripMenuItem")
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
+        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.LanguageToolStripMenuItem})
         Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
         '
         'SettingsToolStripMenuItem
         '
         resources.ApplyResources(Me.SettingsToolStripMenuItem, "SettingsToolStripMenuItem")
         Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        '
+        'LanguageToolStripMenuItem
+        '
+        resources.ApplyResources(Me.LanguageToolStripMenuItem, "LanguageToolStripMenuItem")
+        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HebrewToolStripMenuItem, Me.EnglishToolStripMenuItem})
+        Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
+        '
+        'HebrewToolStripMenuItem
+        '
+        resources.ApplyResources(Me.HebrewToolStripMenuItem, "HebrewToolStripMenuItem")
+        Me.HebrewToolStripMenuItem.Name = "HebrewToolStripMenuItem"
+        '
+        'EnglishToolStripMenuItem
+        '
+        resources.ApplyResources(Me.EnglishToolStripMenuItem, "EnglishToolStripMenuItem")
+        Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
         '
         'HelpToolStripMenuItem
         '
@@ -220,4 +239,7 @@ Partial Class Form1
     Friend WithEvents LblPrinter As Label
     Friend WithEvents LblPath As Label
     Friend WithEvents Button1 As Button
+    Friend WithEvents LanguageToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents HebrewToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EnglishToolStripMenuItem As ToolStripMenuItem
 End Class

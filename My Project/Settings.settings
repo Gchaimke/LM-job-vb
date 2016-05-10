@@ -6,10 +6,13 @@
       <Value Profile="(Default)">\LM-job</Value>
     </Setting>
     <Setting Name="ProgramPath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Program Files (x86)\Brady\LabelMark5\Bin\LM5.exe</Value>
+      <Value Profile="(Default)">Settings</Value>
     </Setting>
     <Setting Name="FileExt" Type="System.String" Scope="User">
-      <Value Profile="(Default)">l5f</Value>
+      <Value Profile="(Default)">l6f</Value>
+    </Setting>
+    <Setting Name="language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">en</Value>
     </Setting>
   </Settings>
 </SettingsFile>

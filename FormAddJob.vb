@@ -12,14 +12,12 @@ Public Class FormAddJob
 
     Private Sub FormAddJob_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
-
             CurrentProject = Form1.MAIN_DIR_NAME & "\" & Form1.LsbProjects.SelectedItem.ToString & "\" & "Labels"
             SelectedPath = Directory.GetFiles(Form1.MAIN_LABELS_DIR)
             Main(SelectedPath)
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
         End Try
-
         TextBox2.Text = "1"
     End Sub
 

@@ -68,7 +68,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("C:\Program Files (x86)\Brady\LabelMark5\Bin\LM5.exe")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Settings")>  _
         Public Property ProgramPath() As String
             Get
                 Return CType(Me("ProgramPath"),String)
@@ -80,13 +80,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("l5f")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("l6f")>  _
         Public Property FileExt() As String
             Get
                 Return CType(Me("FileExt"),String)
             End Get
             Set
                 Me("FileExt") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("en")>  _
+        Public Property language() As String
+            Get
+                Return CType(Me("language"),String)
+            End Get
+            Set
+                Me("language") = value
             End Set
         End Property
     End Class
