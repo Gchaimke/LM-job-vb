@@ -99,7 +99,7 @@ Partial Class Form1
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 77)
+        Me.Label1.Location = New System.Drawing.Point(12, 84)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(46, 13)
@@ -128,7 +128,7 @@ Partial Class Form1
         '
         Me.TxbFilter1.Location = New System.Drawing.Point(12, 54)
         Me.TxbFilter1.Name = "TxbFilter1"
-        Me.TxbFilter1.Size = New System.Drawing.Size(108, 20)
+        Me.TxbFilter1.Size = New System.Drawing.Size(171, 20)
         Me.TxbFilter1.TabIndex = 1
         '
         'LstJobs
@@ -143,7 +143,7 @@ Partial Class Form1
         '
         Me.BtnProject.Location = New System.Drawing.Point(12, 343)
         Me.BtnProject.Name = "BtnProject"
-        Me.BtnProject.Size = New System.Drawing.Size(108, 23)
+        Me.BtnProject.Size = New System.Drawing.Size(171, 23)
         Me.BtnProject.TabIndex = 4
         Me.BtnProject.Text = "New Project folder"
         Me.BtnProject.UseVisualStyleBackColor = True
@@ -168,11 +168,11 @@ Partial Class Form1
         '
         'BtnNewJob
         '
-        Me.BtnNewJob.Location = New System.Drawing.Point(189, 345)
+        Me.BtnNewJob.Location = New System.Drawing.Point(189, 343)
         Me.BtnNewJob.Name = "BtnNewJob"
-        Me.BtnNewJob.Size = New System.Drawing.Size(90, 23)
+        Me.BtnNewJob.Size = New System.Drawing.Size(190, 23)
         Me.BtnNewJob.TabIndex = 8
-        Me.BtnNewJob.Text = "New job file"
+        Me.BtnNewJob.Text = "New Label file"
         Me.BtnNewJob.UseVisualStyleBackColor = True
         '
         'BtnEdit

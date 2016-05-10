@@ -157,7 +157,6 @@ Public Class Form1
         Else
             FormAddJob.Show()
         End If
-        LsbProjects.Focus()
     End Sub
     'Start Menu Buttons 
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
@@ -222,4 +221,5 @@ Public Class Form1
         'save doc 
         doc.Save(selectedFile)
     End Sub
+
 End Class
