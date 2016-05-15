@@ -141,9 +141,6 @@
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.he-IL.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.he.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

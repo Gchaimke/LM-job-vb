@@ -25,6 +25,10 @@ Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ChangeLanguage(My.Settings.language)
+        If My.Settings.language = "he" Then
+            Me.RightToLeft = RightToLeft.Yes
+            Me.RightToLeftLayout = True
+        End If
         Try
             If Not Directory.Exists(MAIN_DIR_NAME) Then
                 System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
@@ -102,20 +106,6 @@ Public Class Form1
     End Sub
 
     'Start Buttons functions
-    Private Sub BtnProject_Click(sender As Object, e As EventArgs) Handles BtnProject.Click
-        Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox("Project Name", "Please Name new project folder")
-        Try
-            If (Not System.IO.Directory.Exists(NewFolderName)) Then
-                System.IO.Directory.CreateDirectory(NewFolderName)
-                MsgBox(NewFolderName & " created.")
-            Else
-                MsgBox("Folder " & NewFolderName & " exist!")
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message.ToString)
-        End Try
-    End Sub
-
     Private Sub BtnEdit_Click(sender As Object, e As EventArgs) Handles BtnEdit.Click
         Try
             Dim OpenFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\Labels\" & LstJobs.SelectedItem.ToString & "." & My.Settings.FileExt
@@ -176,12 +166,25 @@ Public Class Form1
         AboutBox.Show()
     End Sub
 
+    Private Sub BtnProject_Click(sender As Object, e As EventArgs) Handles BtnProject.Click
+        CreateFolder()
+    End Sub
+
     Private Sub NewProjectFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewProjectFolderToolStripMenuItem.Click
-        Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox("Project Name", "Please Name new project folder")
+        CreateFolder()
+    End Sub
+
+    Private Sub CreateFolder()
+        Dim MsgLang As String
+        If My.Settings.language = "en" Then
+            MsgLang = "Please Name new project folder"
+        Else
+            MsgLang = "נא לתת שם לתיקיה חדשה"
+        End If
+        Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox(MsgLang)
         Try
             If (Not System.IO.Directory.Exists(NewFolderName)) Then
                 System.IO.Directory.CreateDirectory(NewFolderName)
-                MsgBox(NewFolderName & " created.")
             ElseIf NewFolderName = "" Then
                 MsgBox("Folder " & NewFolderName & " exist!")
             End If
@@ -201,10 +204,10 @@ Public Class Form1
                 Dim selectedFile As String = MAIN_DIR_NAME & "\" & LsbProjects.SelectedItem.ToString & "\" & LstJobs.SelectedItem.ToString & ".lmj"
                 doc.Load(selectedFile)
                 Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
-                LblPrinter.Text = "Printer: " & attribute.Attributes("Printer").Value
-                LblDetals.Text = "Label ID: " & attribute.Attributes("PartID").Value
-                LblCopies.Text = "Copies: " & attribute.Attributes("NumberOfCopiesToPrint").Value
-                LblPath.Text = "Path: " & attribute.Attributes("Path").Value
+                LblPrinter.Text = attribute.Attributes("Printer").Value
+                LblDetals.Text = attribute.Attributes("PartID").Value
+                LblCopies.Text = attribute.Attributes("NumberOfCopiesToPrint").Value
+                LblPath.Text = attribute.Attributes("Path").Value
             End If
         Catch ex As Exception
         End Try
@@ -246,7 +249,6 @@ Public Class Form1
     Private Sub HebrewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HebrewToolStripMenuItem.Click
         ChangeLanguage("he")
         My.Settings.language = "he"
-        MsgBox("Language changed to Hebrew")
         Me.RightToLeft = RightToLeft.Yes
         Me.RightToLeftLayout = True
 
@@ -255,7 +257,6 @@ Public Class Form1
     Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
         ChangeLanguage("en")
         My.Settings.language = "en"
-        MsgBox("Language changed to English")
         Me.RightToLeft = RightToLeft.No
         Me.RightToLeftLayout = False
     End Sub
