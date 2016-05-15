@@ -128,6 +128,12 @@
   <data name="LabelProductName.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
   </data>
+  <data name="LogoPictureBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;LabelCompanyName.Name" xml:space="preserve">
+    <value>LabelCompanyName</value>
+  </data>
   <data name="LabelCompanyName.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>0, 17</value>
   </data>
@@ -173,9 +179,6 @@ Customize the application's assembly information in the Application pane of Proj
   </data>
   <data name="TextBoxDescription.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 103</value>
-  </data>
-  <data name="TableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
   </data>
   <data name="LogoPictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -668,6 +671,9 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="&gt;&gt;LabelProductName.Name" xml:space="preserve">
     <value>LabelProductName</value>
   </data>
+  <data name="LabelCopyright.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 3, 0</value>
+  </data>
   <data name="TextBoxDescription.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -679,9 +685,6 @@ Customize the application's assembly information in the Application pane of Proj
   </data>
   <data name="LabelVersion.Text" xml:space="preserve">
     <value>Version</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LogoPictureBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>151, 252</value>
@@ -710,8 +713,8 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="&gt;&gt;TextBoxDescription.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;TextBoxDescription.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;OKButton.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="LabelProductName.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -734,17 +737,11 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="LabelVersion.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 25</value>
   </data>
-  <data name="LabelCompanyName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
   <data name="OKButton.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="&gt;&gt;LabelCopyright.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="LogoPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
   </data>
   <data name="LabelProductName.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 17</value>
@@ -782,10 +779,7 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="LabelProductName.Text" xml:space="preserve">
     <value>LM-JOB</value>
   </data>
-  <data name="&gt;&gt;TableLayoutPanel.Name" xml:space="preserve">
-    <value>TableLayoutPanel</value>
-  </data>
-  <data name="LogoPictureBox.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="LabelCompanyName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
   <data name="&gt;&gt;TableLayoutPanel.Type" xml:space="preserve">
@@ -797,8 +791,8 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="TextBoxDescription.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;LabelProductName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;LabelVersion.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="OKButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Right</value>
@@ -818,8 +812,8 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="LabelCompanyName.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 17</value>
   </data>
-  <data name="&gt;&gt;LabelCompanyName.Name" xml:space="preserve">
-    <value>LabelCompanyName</value>
+  <data name="&gt;&gt;TextBoxDescription.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="LabelVersion.Size" type="System.Drawing.Size, System.Drawing">
     <value>311, 17</value>
@@ -830,8 +824,11 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="&gt;&gt;LabelCopyright.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LabelVersion.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="OKButton.Text" xml:space="preserve">
+    <value>&amp;OK</value>
+  </data>
+  <data name="LogoPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
   </data>
   <data name="&gt;&gt;TextBoxDescription.Parent" xml:space="preserve">
     <value>TableLayoutPanel</value>
@@ -854,17 +851,20 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>9, 9, 9, 9</value>
   </data>
+  <data name="&gt;&gt;LabelProductName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="LabelProductName.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="LabelCopyright.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 0, 3, 0</value>
+  <data name="&gt;&gt;TableLayoutPanel.Name" xml:space="preserve">
+    <value>TableLayoutPanel</value>
   </data>
   <data name="&gt;&gt;OKButton.Name" xml:space="preserve">
     <value>OKButton</value>
   </data>
-  <data name="&gt;&gt;LabelProductName.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;LabelProductName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="LabelVersion.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>
@@ -878,14 +878,14 @@ Customize the application's assembly information in the Application pane of Proj
   <data name="&gt;&gt;LabelCopyright.Parent" xml:space="preserve">
     <value>TableLayoutPanel</value>
   </data>
-  <data name="OKButton.Text" xml:space="preserve">
-    <value>&amp;OK</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;LabelCopyright.Name" xml:space="preserve">
     <value>LabelCopyright</value>
   </data>
-  <data name="&gt;&gt;OKButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="TableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <data name="LabelCompanyName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

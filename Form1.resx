@@ -130,11 +130,8 @@
   <data name="&gt;&gt;LanguageToolStripMenuItem.Name" xml:space="preserve">
     <value>LanguageToolStripMenuItem</value>
   </data>
-  <data name="TxbFilter1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 20</value>
-  </data>
-  <data name="&gt;&gt;LblDetals.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
   </data>
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
@@ -155,8 +152,8 @@
   <data name="LstJobs.Location" type="System.Drawing.Point, System.Drawing">
     <value>189, 112</value>
   </data>
-  <data name="&gt;&gt;BtnNewJob.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;LblPrinter.Name" xml:space="preserve">
+    <value>LblPrinter</value>
   </data>
   <data name="LstJobs.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 225</value>
@@ -179,8 +176,14 @@
   <data name="BtnProject.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 23</value>
   </data>
+  <data name="&gt;&gt;LblDetals.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="BtnNewJob.Size" type="System.Drawing.Size, System.Drawing">
     <value>190, 23</value>
+  </data>
+  <data name="Button1.Text" xml:space="preserve">
+    <value>change</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 84</value>
@@ -200,9 +203,6 @@
   </data>
   <data name="&gt;&gt;BtnProject.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;FileToolStripMenuItem.Name" xml:space="preserve">
-    <value>FileToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;LsbProjects.Name" xml:space="preserve">
     <value>LsbProjects</value>
@@ -243,8 +243,8 @@
   <data name="&gt;&gt;BtnOpen.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="BtnOpen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>585, 233</value>
+  <data name="TxbFilter1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 20</value>
   </data>
   <data name="BtnEdit.Location" type="System.Drawing.Point, System.Drawing">
     <value>403, 233</value>
@@ -264,8 +264,8 @@
   <data name="LblPath.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
   </data>
-  <data name="BtnNewJob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 343</value>
+  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;HebrewToolStripMenuItem.Name" xml:space="preserve">
     <value>HebrewToolStripMenuItem</value>
@@ -273,23 +273,17 @@
   <data name="LblPath.MaximumSize" type="System.Drawing.Size, System.Drawing">
     <value>250, 0</value>
   </data>
-  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 23</value>
+  <data name="BtnOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 233</value>
   </data>
   <data name="&gt;&gt;LstJobs.Type" xml:space="preserve">
     <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;EngleshToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LblPath.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="BtnEdit.Text" xml:space="preserve">
+    <value>Edit Label</value>
   </data>
   <data name="&gt;&gt;HelpToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="BtnEdit.Text" xml:space="preserve">
-    <value>Edit Label</value>
   </data>
   <data name="&gt;&gt;EditToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -303,14 +297,17 @@
   <data name="&gt;&gt;TxbFilter1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;BtnNewJob.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 13</value>
   </data>
   <data name="&gt;&gt;FileToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="HebrewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>152, 22</value>
   </data>
   <data name="&gt;&gt;MenuStrip1.Name" xml:space="preserve">
     <value>MenuStrip1</value>
@@ -321,8 +318,8 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Form1</value>
   </data>
-  <data name="LblCopies.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
     <value>$this</value>
@@ -342,14 +339,14 @@
   <data name="&gt;&gt;LblPath.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>501, 155</value>
-  </data>
   <data name="HelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
   </data>
   <data name="FileToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
+  </data>
+  <data name="&gt;&gt;SettingsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;HelpToolStripMenuItem.Name" xml:space="preserve">
     <value>HelpToolStripMenuItem</value>
@@ -359,6 +356,9 @@
   </data>
   <data name="BtnProject.Text" xml:space="preserve">
     <value>New Project folder</value>
+  </data>
+  <data name="&gt;&gt;TxbFilter1.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
@@ -402,8 +402,11 @@
   <data name="&gt;&gt;BtnProject.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SettingsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;LblCopies.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnProject.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="&gt;&gt;LblCopies.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -414,8 +417,8 @@
   <data name="&gt;&gt;LblPrinter.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;LblCopies.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="LblCopies.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
   <data name="LblDetals.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -435,8 +438,8 @@
   <data name="EnglishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="&gt;&gt;LblPrinter.Name" xml:space="preserve">
-    <value>LblPrinter</value>
+  <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>501, 155</value>
   </data>
   <data name="&gt;&gt;LblCopies.Name" xml:space="preserve">
     <value>LblCopies</value>
@@ -498,14 +501,11 @@
   <data name="NewProjectFolderToolStripMenuItem.Text" xml:space="preserve">
     <value>New Project folder</value>
   </data>
-  <data name="Label1.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
   <data name="&gt;&gt;MenuStrip1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="LblPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 179</value>
+    <value>400, 183</value>
   </data>
   <data name="Label1.Text" xml:space="preserve">
     <value>Found =</value>
@@ -519,17 +519,20 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;NewJobFileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;LblPath.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="LblPath.Text" xml:space="preserve">
-    <value>Path : </value>
+  <data name="EnglishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LblPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>38, 13</value>
+  </data>
+  <data name="HebrewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hebrew</value>
   </data>
   <data name="BtnDlete.Location" type="System.Drawing.Point, System.Drawing">
     <value>491, 233</value>
-  </data>
-  <data name="HebrewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
   </data>
   <data name="&gt;&gt;EnglishToolStripMenuItem.Name" xml:space="preserve">
     <value>EnglishToolStripMenuItem</value>
@@ -543,14 +546,14 @@
   <data name="&gt;&gt;Label2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;LblDetals.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="BtnNewJob.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 343</value>
+  </data>
+  <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 23</value>
   </data>
   <data name="Button1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
-  </data>
-  <data name="&gt;&gt;EngleshToolStripMenuItem.Name" xml:space="preserve">
-    <value>EngleshToolStripMenuItem</value>
   </data>
   <data name="LblPath.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -568,7 +571,7 @@
     <value>12</value>
   </data>
   <data name="SettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 22</value>
+    <value>152, 22</value>
   </data>
   <data name="LblDetals.Location" type="System.Drawing.Point, System.Drawing">
     <value>400, 134</value>
@@ -579,20 +582,14 @@
   <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
-  <data name="&gt;&gt;BtnProject.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <data name="&gt;&gt;BtnNewJob.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;TxbFilter1.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;LblDetals.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>698, 380</value>
-  </data>
-  <data name="EngleshToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
   </data>
   <data name="&gt;&gt;BtnOpen.Parent" xml:space="preserve">
     <value>$this</value>
@@ -612,8 +609,8 @@
   <data name="LanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>152, 22</value>
   </data>
-  <data name="Button1.Text" xml:space="preserve">
-    <value>change</value>
+  <data name="&gt;&gt;FileToolStripMenuItem.Name" xml:space="preserve">
+    <value>FileToolStripMenuItem</value>
   </data>
   <data name="BtnEdit.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -624,8 +621,8 @@
   <data name="&gt;&gt;LstJobs.Name" xml:space="preserve">
     <value>LstJobs</value>
   </data>
-  <data name="LblPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
+  <data name="&gt;&gt;NewJobFileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="MenuStrip1.Text" xml:space="preserve">
     <value>MenuStrip1</value>
@@ -642,6 +639,9 @@
   <data name="&gt;&gt;LanguageToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="LblPath.Text" xml:space="preserve">
+    <value>Path : </value>
+  </data>
   <data name="LblPrinter.Text" xml:space="preserve">
     <value>Printer : </value>
   </data>
@@ -657,11 +657,11 @@
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>he-IL</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>he-IL</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>38</value>

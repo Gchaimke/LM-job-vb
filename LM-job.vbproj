@@ -138,26 +138,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AboutBox.en.resx">
-      <DependentUpon>AboutBox.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AboutBox.he-IL.resx">
-      <DependentUpon>AboutBox.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.en.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.he-IL.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAddJob.he-IL.resx">
-      <DependentUpon>FormAddJob.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAddJob.resx">
       <DependentUpon>FormAddJob.vb</DependentUpon>
@@ -167,12 +152,6 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings.en.resx">
-      <DependentUpon>Settings.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings.he-IL.resx">
-      <DependentUpon>Settings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
@@ -190,7 +169,6 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
-    <None Include="Resources\111000256.lmj" />
     <None Include="Resources\3PS-094-2-WT.l5f" />
     <None Include="Resources\3PS-1000-2-WT.l5f" />
     <None Include="Resources\3PS-125-2-WT.l5f" />
@@ -201,7 +179,6 @@
     <None Include="Resources\3PS-500-2-WT.l5f" />
     <None Include="Resources\3PS-750-2-WT.l5f" />
     <None Include="Resources\Job-file.lmj" />
-    <None Include="Resources\Label3PS2502.l5f" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
