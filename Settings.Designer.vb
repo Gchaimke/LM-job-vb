@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Settings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Settings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Settings))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -32,10 +32,8 @@ Partial Class Settings
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BtnReset = New System.Windows.Forms.Button()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.TxbFileExt = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -87,11 +85,6 @@ Partial Class Settings
         Me.BtnReset.Name = "BtnReset"
         Me.BtnReset.UseVisualStyleBackColor = True
         '
-        'Label5
-        '
-        resources.ApplyResources(Me.Label5, "Label5")
-        Me.Label5.Name = "Label5"
-        '
         'TxbFileExt
         '
         Me.TxbFileExt.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "FileExt", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
@@ -106,22 +99,11 @@ Partial Class Settings
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Text = Global.LM_job.My.MySettings.Default.ProgramPath
         '
-        'ComboBox1
-        '
-        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "language", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1")})
-        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Text = Global.LM_job.My.MySettings.Default.language
-        '
         'Settings
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BtnCencel
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnReset)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TxbFileExt)
@@ -150,6 +132,4 @@ Partial Class Settings
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnReset As Button
-    Friend WithEvents Label5 As Label
-    Friend WithEvents ComboBox1 As ComboBox
 End Class

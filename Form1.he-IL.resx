@@ -137,16 +137,25 @@
     <value>קובץ</value>
   </data>
   <data name="SettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
+    <value>112, 22</value>
   </data>
   <data name="SettingsToolStripMenuItem.Text" xml:space="preserve">
     <value>הגדרות</value>
   </data>
+  <data name="HebrewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
   <data name="HebrewToolStripMenuItem.Text" xml:space="preserve">
     <value>עיברית</value>
   </data>
+  <data name="EnglishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>111, 22</value>
+  </data>
   <data name="EnglishToolStripMenuItem.Text" xml:space="preserve">
     <value>אנגלית</value>
+  </data>
+  <data name="LanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 22</value>
   </data>
   <data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
     <value>שפה</value>
@@ -163,11 +172,8 @@
   <data name="HelpToolStripMenuItem.Text" xml:space="preserve">
     <value>תמיכה</value>
   </data>
-  <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 13</value>
-  </data>
   <data name="Label1.Text" xml:space="preserve">
-    <value>נמצא =</value>
+    <value>נמצא = </value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>123, 13</value>

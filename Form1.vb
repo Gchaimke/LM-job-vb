@@ -5,8 +5,10 @@ Imports System.IO
 Imports System.Xml
 Imports System.Threading
 Imports System.Globalization
+Imports System.ComponentModel
 
 Public Class Form1
+    Private Property CultureInfo As CultureInfo
     Public MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
     Public MAIN_LABELS_DIR As String = MAIN_DIR_NAME & "\Labels\"
     Private LabelMarkPath As String = My.Settings.ProgramPath
@@ -14,8 +16,15 @@ Public Class Form1
     Dim ProjectsDir As String()
     Dim CurrentProject As String
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub ChangeLanguage(ByVal Language As String)
+        For Each c As Control In Me.Controls
+            Dim crmLang As ComponentResourceManager = New ComponentResourceManager(GetType(Form1))
+            crmLang.ApplyResources(c, c.Name, New CultureInfo(Language)) 'Set desired language
+        Next c
+    End Sub
 
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ChangeLanguage(My.Settings.language)
         Try
             If Not Directory.Exists(MAIN_DIR_NAME) Then
                 System.IO.Directory.CreateDirectory(MAIN_DIR_NAME)
@@ -235,28 +244,13 @@ Public Class Form1
     End Sub
 
     Private Sub HebrewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HebrewToolStripMenuItem.Click
-        ' Sets the culture to UK English
-        Thread.CurrentThread.CurrentCulture = New CultureInfo("he-IL")
-        ' Sets the UI culture to UK English
-        Thread.CurrentThread.CurrentUICulture = New CultureInfo("he-IL")
+        ChangeLanguage("he-IL")
+        My.Settings.language = "he-IL"
 
-        Dim frmMain As New Form1
-        frmMain.Show()
-
-        Me.Close()
-        Me.Dispose()
     End Sub
 
     Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
-        ' Sets the culture to UK English
-        Thread.CurrentThread.CurrentCulture = New CultureInfo("en")
-        ' Sets the UI culture to UK English
-        Thread.CurrentThread.CurrentUICulture = New CultureInfo("en")
-
-        Dim frmMain As New Form1
-        frmMain.Show()
-
-        Me.Close()
-        Me.Dispose()
+        ChangeLanguage("en")
+        My.Settings.language = "en"
     End Sub
 End Class
