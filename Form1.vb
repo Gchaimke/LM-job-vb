@@ -244,13 +244,19 @@ Public Class Form1
     End Sub
 
     Private Sub HebrewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HebrewToolStripMenuItem.Click
-        ChangeLanguage("he-IL")
-        My.Settings.language = "he-IL"
+        ChangeLanguage("he")
+        My.Settings.language = "he"
+        MsgBox("Language changed to Hebrew")
+        Me.RightToLeft = RightToLeft.Yes
+        Me.RightToLeftLayout = True
 
     End Sub
 
     Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
         ChangeLanguage("en")
         My.Settings.language = "en"
+        MsgBox("Language changed to English")
+        Me.RightToLeft = RightToLeft.No
+        Me.RightToLeftLayout = False
     End Sub
 End Class
