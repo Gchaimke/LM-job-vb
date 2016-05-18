@@ -121,6 +121,60 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="NewProjectFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="NewProjectFolderToolStripMenuItem.Text" xml:space="preserve">
+    <value>New Project folder</value>
+  </data>
+  <data name="NewJobFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 22</value>
+  </data>
+  <data name="NewJobFileToolStripMenuItem.Text" xml:space="preserve">
+    <value>New Job file</value>
+  </data>
+  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="SettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 22</value>
+  </data>
+  <data name="SettingsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="HebrewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="HebrewToolStripMenuItem.Text" xml:space="preserve">
+    <value>Hebrew</value>
+  </data>
+  <data name="EnglishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 22</value>
+  </data>
+  <data name="EnglishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 22</value>
+  </data>
+  <data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 20</value>
+  </data>
+  <data name="EditToolStripMenuItem.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="HelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="HelpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="MenuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -149,60 +203,6 @@
   </data>
   <data name="&gt;&gt;MenuStrip1.ZOrder" xml:space="preserve">
     <value>19</value>
-  </data>
-  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="NewProjectFolderToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="NewProjectFolderToolStripMenuItem.Text" xml:space="preserve">
-    <value>New Project folder</value>
-  </data>
-  <data name="NewJobFileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 22</value>
-  </data>
-  <data name="NewJobFileToolStripMenuItem.Text" xml:space="preserve">
-    <value>New Job file</value>
-  </data>
-  <data name="EditToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 20</value>
-  </data>
-  <data name="EditToolStripMenuItem.Text" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="SettingsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="SettingsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Settings</value>
-  </data>
-  <data name="LanguageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 22</value>
-  </data>
-  <data name="LanguageToolStripMenuItem.Text" xml:space="preserve">
-    <value>Language</value>
-  </data>
-  <data name="HebrewToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 22</value>
-  </data>
-  <data name="HebrewToolStripMenuItem.Text" xml:space="preserve">
-    <value>Hebrew</value>
-  </data>
-  <data name="EnglishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 22</value>
-  </data>
-  <data name="EnglishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="HelpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="HelpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Help</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

@@ -3,9 +3,9 @@
 
 Imports System.IO
 Imports System.Xml
-Imports System.Threading
 Imports System.Globalization
 Imports System.ComponentModel
+Imports System.Resources
 
 Public Class Form1
     Private Property CultureInfo As CultureInfo
@@ -15,6 +15,7 @@ Public Class Form1
     Dim SelectedPath As String()
     Dim ProjectsDir As String()
     Dim CurrentProject As String
+    Dim rm As New ResourceManager("LM-job.Form1", GetType(Form1).Assembly)
 
     Private Sub ChangeLanguage(ByVal Language As String)
         For Each c As Control In Me.Controls
@@ -24,6 +25,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'MessageBox.Show(rm.GetString("MsgSelectfirst"))
         ChangeLanguage(My.Settings.language)
         If My.Settings.language = "he" Then
             Me.RightToLeft = RightToLeft.Yes
@@ -161,7 +163,15 @@ Public Class Form1
             FormAddJob.Show()
         End If
     End Sub
-    'Start Menu Buttons 
+
+    Private Sub NewJobFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewJobFileToolStripMenuItem.Click
+        If LsbProjects.SelectedIndex < 0 Then
+            MsgBox("select Project first")
+        Else
+            FormAddJob.Show()
+        End If
+    End Sub
+
     Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
         AboutBox.Show()
     End Sub
@@ -239,11 +249,8 @@ Public Class Form1
                 'save doc 
                 doc.Save(selectedFile)
             End If
-
         Catch ex As Exception
-
         End Try
-
     End Sub
 
     Private Sub HebrewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HebrewToolStripMenuItem.Click
@@ -260,4 +267,6 @@ Public Class Form1
         Me.RightToLeft = RightToLeft.No
         Me.RightToLeftLayout = False
     End Sub
+
+
 End Class

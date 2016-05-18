@@ -147,6 +147,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAddJob.he.resx">
+      <DependentUpon>FormAddJob.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAddJob.resx">
       <DependentUpon>FormAddJob.vb</DependentUpon>
     </EmbeddedResource>

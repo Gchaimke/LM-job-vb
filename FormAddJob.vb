@@ -1,16 +1,27 @@
 ﻿Option Explicit On
 
-Imports System
 Imports System.IO
-Imports System.Collections
 Imports System.Xml
+Imports System.ComponentModel
+Imports System.Globalization
 
 Public Class FormAddJob
     Dim SelectedPath As String()
     Dim CurrentProject As String
 
+    Private Sub ChangeLanguage(ByVal Language As String)
+        For Each c As Control In Me.Controls
+            Dim crmLang As ComponentResourceManager = New ComponentResourceManager(GetType(FormAddJob))
+            crmLang.ApplyResources(c, c.Name, New CultureInfo(Language)) 'Set desired language
+        Next c
+    End Sub
 
     Private Sub FormAddJob_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ChangeLanguage(My.Settings.language)
+        If My.Settings.language = "he" Then
+            Me.RightToLeft = RightToLeft.Yes
+            Me.RightToLeftLayout = True
+        End If
         Try
             CurrentProject = Form1.MAIN_DIR_NAME & "\" & Form1.LsbProjects.SelectedItem.ToString & "\" & "Labels"
             SelectedPath = Directory.GetFiles(Form1.MAIN_LABELS_DIR)
@@ -42,6 +53,7 @@ Public Class FormAddJob
         Dim NewFileName = FolderName & "\" & NewJobName & ".lmj"
         Try
             If TextBox1.Text.ToString = "" Or TextBox1.Text.ToString = " " Then
+
                 MsgBox("Please set file name.")
                 Exit Sub
             End If
