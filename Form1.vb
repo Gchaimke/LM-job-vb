@@ -6,26 +6,32 @@ Imports System.Xml
 Imports System.Globalization
 Imports System.ComponentModel
 Imports System.Resources
+Imports System.Reflection
+Imports System.Threading
 
 Public Class Form1
     Private Property CultureInfo As CultureInfo
+    Dim resFile As String = "LM_job.Messages"
+    Dim component_resource_manager As New ComponentResourceManager(Me.GetType)
+    Dim resources As New ResourceManager(resFile, [Assembly].GetExecutingAssembly())
+
     Public MAIN_DIR_NAME As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & My.Settings.DefPath
     Public MAIN_LABELS_DIR As String = MAIN_DIR_NAME & "\Labels\"
     Private LabelMarkPath As String = My.Settings.ProgramPath
     Dim SelectedPath As String()
     Dim ProjectsDir As String()
     Dim CurrentProject As String
-    Dim rm As New ResourceManager("LM-job.Form1", GetType(Form1).Assembly)
 
     Private Sub ChangeLanguage(ByVal Language As String)
-        For Each c As Control In Me.Controls
-            Dim crmLang As ComponentResourceManager = New ComponentResourceManager(GetType(Form1))
-            crmLang.ApplyResources(c, c.Name, New CultureInfo(Language)) 'Set desired language
-        Next c
+        For Each crl As Control In Me.Controls
+            component_resource_manager.ApplyResources(crl, crl.Name, New CultureInfo(Language)) 'Set desired language
+        Next crl
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.language)
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.language)
+        component_resource_manager.ApplyResources(Me, "$this", CultureInfo)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'MessageBox.Show(rm.GetString("MsgSelectfirst"))
         ChangeLanguage(My.Settings.language)
         If My.Settings.language = "he" Then
             Me.RightToLeft = RightToLeft.Yes
@@ -84,7 +90,7 @@ Public Class Form1
                 LsbProjects.Items.Add(dirInfo.Name)
                 i += 1
             Next
-            Label1.Text = "Found =" & i
+            Label1.Text = resources.GetString("found") & i
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
         End Try
@@ -115,10 +121,10 @@ Public Class Form1
         Catch ex As Exception
 
             If Not File.Exists(My.Settings.ProgramPath) Then
-                MsgBox("Install or select editing program first")
+                MsgBox(resources.GetString("instalOrSelect"))
                 Settings.Show()
             Else
-                MsgBox("Select label first")
+                MsgBox(resources.GetString("selectLabel"))
             End If
         End Try
     End Sub
@@ -130,10 +136,10 @@ Public Class Form1
         Catch ex As Exception
 
             If Not File.Exists(My.Settings.ProgramPath) Then
-                MsgBox("Install or select editing program first")
+                MsgBox(resources.GetString("instalOrSelect"))
                 Settings.Show()
             Else
-                MsgBox("Select label first")
+                MsgBox(resources.GetString("selectLabel"))
             End If
 
         End Try
@@ -148,63 +154,37 @@ Public Class Form1
                 LstJobs.Items.RemoveAt(SelectedRow)
                 System.IO.File.Delete(selectedFile)
                 System.IO.File.Delete(selectedLabel)
-                MessageBox.Show("File Deleted")
+                MessageBox.Show(resources.GetString("deleted"))
             End If
 
         Catch ex As Exception
-            MsgBox("Select label first")
+            MsgBox(resources.GetString("selectLabel"))
         End Try
     End Sub
 
     Private Sub BtnNewJob_Click(sender As Object, e As EventArgs) Handles BtnNewJob.Click
         If LsbProjects.SelectedIndex < 0 Then
-            MsgBox("select Project first")
+            MsgBox(resources.GetString("selectFolder"))
         Else
             FormAddJob.Show()
         End If
-    End Sub
-
-    Private Sub NewJobFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewJobFileToolStripMenuItem.Click
-        If LsbProjects.SelectedIndex < 0 Then
-            MsgBox("select Project first")
-        Else
-            FormAddJob.Show()
-        End If
-    End Sub
-
-    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
-        AboutBox.Show()
     End Sub
 
     Private Sub BtnProject_Click(sender As Object, e As EventArgs) Handles BtnProject.Click
         CreateFolder()
     End Sub
 
-    Private Sub NewProjectFolderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewProjectFolderToolStripMenuItem.Click
-        CreateFolder()
-    End Sub
-
     Private Sub CreateFolder()
-        Dim MsgLang As String
-        If My.Settings.language = "en" Then
-            MsgLang = "Please Name new project folder"
-        Else
-            MsgLang = "נא לתת שם לתיקיה חדשה"
-        End If
-        Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox(MsgLang)
+        Dim NewFolderName As String = MAIN_DIR_NAME & "\" & InputBox(resources.GetString("nameFolder"))
         Try
             If (Not System.IO.Directory.Exists(NewFolderName)) Then
                 System.IO.Directory.CreateDirectory(NewFolderName)
             ElseIf NewFolderName = "" Then
-                MsgBox("Folder " & NewFolderName & " exist!")
+                MsgBox(resources.GetString("folderMsg") & NewFolderName & resources.GetString("existMsg"))
             End If
         Catch ex As Exception
             MsgBox(ex.Message.ToString)
         End Try
-    End Sub
-
-    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
-        Settings.Show()
     End Sub
 
     Private Sub LstJobs_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LstJobs.SelectedIndexChanged
@@ -234,9 +214,9 @@ Public Class Form1
                 Dim Usersnode As Xml.XmlElement = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
 
                 ' Set prompt.
-                message = "Enter a number of copies"
+                message = resources.GetString("numberOfCopies")
                 ' Set title.
-                title = "Edit Copies"
+                title = resources.GetString("editCopies")
                 ' Set default value.
                 Dim attribute As XmlNode = doc.SelectSingleNode("//LMJob/LabelFiles/LabelFile")
                 defaultValue = attribute.Attributes("NumberOfCopiesToPrint").Value
@@ -253,20 +233,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Private Sub HebrewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HebrewToolStripMenuItem.Click
-        ChangeLanguage("he")
-        My.Settings.language = "he"
-        Me.RightToLeft = RightToLeft.Yes
-        Me.RightToLeftLayout = True
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Settings.Show()
     End Sub
-
-    Private Sub EnglishToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EnglishToolStripMenuItem.Click
-        ChangeLanguage("en")
-        My.Settings.language = "en"
-        Me.RightToLeft = RightToLeft.No
-        Me.RightToLeftLayout = False
-    End Sub
-
-
 End Class

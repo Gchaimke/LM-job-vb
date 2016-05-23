@@ -117,49 +117,43 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox2.Text" xml:space="preserve">
-    <value>1</value>
+  <data name="createIn" xml:space="preserve">
+    <value> created, in folder</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 117</value>
+  <data name="deleted" xml:space="preserve">
+    <value>File Deleted.</value>
   </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 13</value>
+  <data name="editCopies" xml:space="preserve">
+    <value>No. Copies</value>
   </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>עותקים</value>
+  <data name="existMsg" xml:space="preserve">
+    <value>Exist, try another name.</value>
   </data>
-  <data name="BtnSave.Text" xml:space="preserve">
-    <value>הוסף</value>
+  <data name="fileMsg" xml:space="preserve">
+    <value>File </value>
   </data>
-  <data name="Label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 90</value>
+  <data name="folderMsg" xml:space="preserve">
+    <value>Folder</value>
   </data>
-  <data name="Label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
+  <data name="found" xml:space="preserve">
+    <value>Found: </value>
   </data>
-  <data name="Label4.Text" xml:space="preserve">
-    <value>בחר סוג תג</value>
+  <data name="instalOrSelect" xml:space="preserve">
+    <value>Install or select editing program first</value>
   </data>
-  <data name="Label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 64</value>
+  <data name="nameFolder" xml:space="preserve">
+    <value>Please Name new project folder</value>
   </data>
-  <data name="Label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 13</value>
+  <data name="numberOfCopies" xml:space="preserve">
+    <value>Enter a number of copies</value>
   </data>
-  <data name="Label5.Text" xml:space="preserve">
-    <value>שם של תג חדש</value>
+  <data name="selectFolder" xml:space="preserve">
+    <value>Select project folder first</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="selectLabel" xml:space="preserve">
+    <value>Select label first</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.RightToLeftLayout" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>הוסף תג חדש</value>
+  <data name="setFileName" xml:space="preserve">
+    <value>Please set file name.</value>
   </data>
 </root>

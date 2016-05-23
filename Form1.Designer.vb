@@ -23,16 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewProjectFolderToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NewJobFileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EditToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LanguageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HebrewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EnglishToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LsbProjects = New System.Windows.Forms.ListBox()
@@ -52,63 +42,8 @@ Partial Class Form1
         Me.LblDetalsText = New System.Windows.Forms.Label()
         Me.LblCopiesText = New System.Windows.Forms.Label()
         Me.LblPathText = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.EditToolStripMenuItem, Me.HelpToolStripMenuItem})
-        resources.ApplyResources(Me.MenuStrip1, "MenuStrip1")
-        Me.MenuStrip1.Name = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewProjectFolderToolStripMenuItem, Me.NewJobFileToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        resources.ApplyResources(Me.FileToolStripMenuItem, "FileToolStripMenuItem")
-        '
-        'NewProjectFolderToolStripMenuItem
-        '
-        Me.NewProjectFolderToolStripMenuItem.Name = "NewProjectFolderToolStripMenuItem"
-        resources.ApplyResources(Me.NewProjectFolderToolStripMenuItem, "NewProjectFolderToolStripMenuItem")
-        '
-        'NewJobFileToolStripMenuItem
-        '
-        Me.NewJobFileToolStripMenuItem.Name = "NewJobFileToolStripMenuItem"
-        resources.ApplyResources(Me.NewJobFileToolStripMenuItem, "NewJobFileToolStripMenuItem")
-        '
-        'EditToolStripMenuItem
-        '
-        Me.EditToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.LanguageToolStripMenuItem})
-        Me.EditToolStripMenuItem.Name = "EditToolStripMenuItem"
-        resources.ApplyResources(Me.EditToolStripMenuItem, "EditToolStripMenuItem")
-        '
-        'SettingsToolStripMenuItem
-        '
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        resources.ApplyResources(Me.SettingsToolStripMenuItem, "SettingsToolStripMenuItem")
-        '
-        'LanguageToolStripMenuItem
-        '
-        Me.LanguageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HebrewToolStripMenuItem, Me.EnglishToolStripMenuItem})
-        Me.LanguageToolStripMenuItem.Name = "LanguageToolStripMenuItem"
-        resources.ApplyResources(Me.LanguageToolStripMenuItem, "LanguageToolStripMenuItem")
-        '
-        'HebrewToolStripMenuItem
-        '
-        Me.HebrewToolStripMenuItem.Name = "HebrewToolStripMenuItem"
-        resources.ApplyResources(Me.HebrewToolStripMenuItem, "HebrewToolStripMenuItem")
-        '
-        'EnglishToolStripMenuItem
-        '
-        Me.EnglishToolStripMenuItem.Name = "EnglishToolStripMenuItem"
-        resources.ApplyResources(Me.EnglishToolStripMenuItem, "EnglishToolStripMenuItem")
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        resources.ApplyResources(Me.HelpToolStripMenuItem, "HelpToolStripMenuItem")
         '
         'Label1
         '
@@ -122,8 +57,8 @@ Partial Class Form1
         '
         'LsbProjects
         '
-        Me.LsbProjects.FormattingEnabled = True
         resources.ApplyResources(Me.LsbProjects, "LsbProjects")
+        Me.LsbProjects.FormattingEnabled = True
         Me.LsbProjects.Name = "LsbProjects"
         '
         'TxbFilter1
@@ -133,8 +68,8 @@ Partial Class Form1
         '
         'LstJobs
         '
-        Me.LstJobs.FormattingEnabled = True
         resources.ApplyResources(Me.LstJobs, "LstJobs")
+        Me.LstJobs.FormattingEnabled = True
         Me.LstJobs.Name = "LstJobs"
         '
         'BtnProject
@@ -213,10 +148,17 @@ Partial Class Form1
         resources.ApplyResources(Me.LblPathText, "LblPathText")
         Me.LblPathText.Name = "LblPathText"
         '
+        'Button2
+        '
+        resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Name = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.LblPathText)
         Me.Controls.Add(Me.LblCopiesText)
         Me.Controls.Add(Me.LblDetalsText)
@@ -236,19 +178,11 @@ Partial Class Form1
         Me.Controls.Add(Me.LsbProjects)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EditToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents LsbProjects As ListBox
@@ -257,21 +191,16 @@ Partial Class Form1
     Friend WithEvents BtnProject As Button
     Friend WithEvents BtnOpen As Button
     Friend WithEvents BtnDlete As Button
-    Friend WithEvents NewProjectFolderToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NewJobFileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnNewJob As Button
-    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents BtnEdit As Button
     Friend WithEvents LblDetals As Label
     Friend WithEvents LblCopies As Label
     Friend WithEvents LblPrinter As Label
     Friend WithEvents LblPath As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents LanguageToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HebrewToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EnglishToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LblPrinterText As Label
     Friend WithEvents LblDetalsText As Label
     Friend WithEvents LblCopiesText As Label
     Friend WithEvents LblPathText As Label
+    Friend WithEvents Button2 As Button
 End Class

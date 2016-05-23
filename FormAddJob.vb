@@ -4,16 +4,23 @@ Imports System.IO
 Imports System.Xml
 Imports System.ComponentModel
 Imports System.Globalization
+Imports System.Resources
+Imports System.Reflection
+Imports System.Threading
 
 Public Class FormAddJob
     Dim SelectedPath As String()
     Dim CurrentProject As String
+    Dim resFile As String = "LM_job.Messages"
+    Dim resources As New ResourceManager(resFile, [Assembly].GetExecutingAssembly())
 
     Private Sub ChangeLanguage(ByVal Language As String)
         For Each c As Control In Me.Controls
             Dim crmLang As ComponentResourceManager = New ComponentResourceManager(GetType(FormAddJob))
             crmLang.ApplyResources(c, c.Name, New CultureInfo(Language)) 'Set desired language
         Next c
+        Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.language)
+        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.language)
     End Sub
 
     Private Sub FormAddJob_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -54,16 +61,16 @@ Public Class FormAddJob
         Try
             If TextBox1.Text.ToString = "" Or TextBox1.Text.ToString = " " Then
 
-                MsgBox("Please set file name.")
+                MsgBox(resources.GetString("setFileName"))
                 Exit Sub
             End If
             If cmbLabels.SelectedIndex < 0 Then
-                MsgBox("Select label first")
+                MsgBox(resources.GetString("selectLabel"))
                 cmbLabels.SelectedIndex = 0
                 Exit Sub
             End If
             If File.Exists(NewFileName) Then
-                MsgBox("File " & NewFileName & " Exist, Try another name.")
+                MsgBox(resources.GetString("fileMsg") & NewFileName & resources.GetString("existMsg"))
                 Exit Sub
             Else
 
@@ -100,7 +107,7 @@ Public Class FormAddJob
                 doc.Save(NewFileName)
                 System.IO.Directory.CreateDirectory(FolderName & "\Labels\")
                 File.WriteAllBytes(FolderName & "\Labels\" & TextBox1.Text & "." & My.Settings.FileExt, CType(My.Resources.ResourceManager.GetObject("_" & cmbLabels.SelectedItem.replace("-", "_")), Byte()))
-                MsgBox(NewJobName & " created, in " & FolderName)
+                MsgBox(NewJobName & " " & resources.GetString("createIn") & " " & FolderName)
                 Me.Close()
             End If
         Catch ex As Exception

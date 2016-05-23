@@ -34,6 +34,8 @@ Partial Class Settings
         Me.BtnReset = New System.Windows.Forms.Button()
         Me.TxbFileExt = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -99,11 +101,27 @@ Partial Class Settings
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Text = Global.LM_job.My.MySettings.Default.ProgramPath
         '
+        'Label5
+        '
+        resources.ApplyResources(Me.Label5, "Label5")
+        Me.Label5.Name = "Label5"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Global.LM_job.My.MySettings.Default, "language", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {resources.GetString("ComboBox1.Items"), resources.GetString("ComboBox1.Items1")})
+        resources.ApplyResources(Me.ComboBox1, "ComboBox1")
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Text = Global.LM_job.My.MySettings.Default.language
+        '
         'Settings
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.BtnCencel
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.BtnReset)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TxbFileExt)
@@ -132,4 +150,6 @@ Partial Class Settings
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents BtnReset As Button
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class
