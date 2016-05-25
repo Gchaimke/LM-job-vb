@@ -104,7 +104,6 @@ Partial Class AboutBox
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.LM_job.My.Resources.Resources.blue_fabric_texture
         Me.CancelButton = Me.OKButton
         Me.Controls.Add(Me.TableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

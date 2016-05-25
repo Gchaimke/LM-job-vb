@@ -28,7 +28,6 @@ Partial Class Form1
         Me.LsbProjects = New System.Windows.Forms.ListBox()
         Me.TxbFilter1 = New System.Windows.Forms.TextBox()
         Me.LstJobs = New System.Windows.Forms.ListBox()
-        Me.BtnNewJob = New System.Windows.Forms.Button()
         Me.LblDetals = New System.Windows.Forms.Label()
         Me.LblCopies = New System.Windows.Forms.Label()
         Me.LblPrinter = New System.Windows.Forms.Label()
@@ -40,6 +39,7 @@ Partial Class Form1
         Me.LblPathText = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnNewJob = New System.Windows.Forms.Button()
         Me.BtnDlete = New System.Windows.Forms.Button()
         Me.BtnOpen = New System.Windows.Forms.Button()
         Me.BtnProject = New System.Windows.Forms.Button()
@@ -71,13 +71,6 @@ Partial Class Form1
         Me.LstJobs.FormattingEnabled = True
         resources.ApplyResources(Me.LstJobs, "LstJobs")
         Me.LstJobs.Name = "LstJobs"
-        '
-        'BtnNewJob
-        '
-        resources.ApplyResources(Me.BtnNewJob, "BtnNewJob")
-        Me.BtnNewJob.Image = Global.LM_job.My.Resources.Resources.add_file_16
-        Me.BtnNewJob.Name = "BtnNewJob"
-        Me.BtnNewJob.UseVisualStyleBackColor = True
         '
         'LblDetals
         '
@@ -139,6 +132,13 @@ Partial Class Form1
         Me.BtnEdit.Name = "BtnEdit"
         Me.BtnEdit.UseVisualStyleBackColor = True
         '
+        'BtnNewJob
+        '
+        resources.ApplyResources(Me.BtnNewJob, "BtnNewJob")
+        Me.BtnNewJob.Image = Global.LM_job.My.Resources.Resources.add_file_16
+        Me.BtnNewJob.Name = "BtnNewJob"
+        Me.BtnNewJob.UseVisualStyleBackColor = True
+        '
         'BtnDlete
         '
         Me.BtnDlete.Image = Global.LM_job.My.Resources.Resources.delete
@@ -164,8 +164,7 @@ Partial Class Form1
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.SystemColors.ButtonFace
-        Me.BackgroundImage = Global.LM_job.My.Resources.Resources.blue_fabric_texture
+        Me.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.LblPathText)
         Me.Controls.Add(Me.LblCopiesText)

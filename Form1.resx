@@ -264,45 +264,6 @@
   <data name="&gt;&gt;LstJobs.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="BtnNewJob.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="BtnNewJob.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="BtnNewJob.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="BtnNewJob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>232, 369</value>
-  </data>
-  <data name="BtnNewJob.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 4, 3, 4</value>
-  </data>
-  <data name="BtnNewJob.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 0, 0, 0</value>
-  </data>
-  <data name="BtnNewJob.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 43</value>
-  </data>
-  <data name="BtnNewJob.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="BtnNewJob.Text" xml:space="preserve">
-    <value>New Label file</value>
-  </data>
-  <data name="&gt;&gt;BtnNewJob.Name" xml:space="preserve">
-    <value>BtnNewJob</value>
-  </data>
-  <data name="&gt;&gt;BtnNewJob.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnNewJob.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtnNewJob.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <data name="LblDetals.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -310,13 +271,16 @@
     <value>NoControl</value>
   </data>
   <data name="LblDetals.Location" type="System.Drawing.Point, System.Drawing">
-    <value>539, 144</value>
+    <value>542, 144</value>
   </data>
   <data name="LblDetals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 14</value>
+    <value>21, 14</value>
   </data>
   <data name="LblDetals.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
+  </data>
+  <data name="LblDetals.Text" xml:space="preserve">
+    <value>ID</value>
   </data>
   <data name="&gt;&gt;LblDetals.Name" xml:space="preserve">
     <value>LblDetals</value>
@@ -340,10 +304,13 @@
     <value>539, 170</value>
   </data>
   <data name="LblCopies.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 14</value>
+    <value>15, 14</value>
   </data>
   <data name="LblCopies.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
+  </data>
+  <data name="LblCopies.Text" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;LblCopies.Name" xml:space="preserve">
     <value>LblCopies</value>
@@ -367,10 +334,13 @@
     <value>539, 121</value>
   </data>
   <data name="LblPrinter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 14</value>
+    <value>42, 14</value>
   </data>
   <data name="LblPrinter.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
+  </data>
+  <data name="LblPrinter.Text" xml:space="preserve">
+    <value>Brady</value>
   </data>
   <data name="&gt;&gt;LblPrinter.Name" xml:space="preserve">
     <value>LblPrinter</value>
@@ -397,10 +367,13 @@
     <value>233, 0</value>
   </data>
   <data name="LblPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 14</value>
+    <value>26, 14</value>
   </data>
   <data name="LblPath.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
+  </data>
+  <data name="LblPath.Text" xml:space="preserve">
+    <value>File</value>
   </data>
   <data name="&gt;&gt;LblPath.Name" xml:space="preserve">
     <value>LblPath</value>
@@ -635,6 +608,45 @@
   </data>
   <data name="&gt;&gt;BtnEdit.ZOrder" xml:space="preserve">
     <value>10</value>
+  </data>
+  <data name="BtnNewJob.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="BtnNewJob.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="BtnNewJob.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnNewJob.Location" type="System.Drawing.Point, System.Drawing">
+    <value>232, 369</value>
+  </data>
+  <data name="BtnNewJob.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BtnNewJob.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 0, 0</value>
+  </data>
+  <data name="BtnNewJob.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 43</value>
+  </data>
+  <data name="BtnNewJob.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="BtnNewJob.Text" xml:space="preserve">
+    <value>New Label file</value>
+  </data>
+  <data name="&gt;&gt;BtnNewJob.Name" xml:space="preserve">
+    <value>BtnNewJob</value>
+  </data>
+  <data name="&gt;&gt;BtnNewJob.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnNewJob.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnNewJob.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="BtnDlete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleLeft</value>

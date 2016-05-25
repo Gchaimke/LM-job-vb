@@ -27,8 +27,8 @@ Public Class Form1
             component_resource_manager.ApplyResources(crl, crl.Name, New CultureInfo(Language)) 'Set desired language
         Next crl
         Thread.CurrentThread.CurrentUICulture = New CultureInfo(My.Settings.language)
-        Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.language)
-        component_resource_manager.ApplyResources(Me, "$this", CultureInfo)
+        'Thread.CurrentThread.CurrentCulture = New CultureInfo(My.Settings.language)
+        'component_resource_manager.ApplyResources(Me, "$this", CultureInfo)
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -36,6 +36,7 @@ Public Class Form1
         If My.Settings.language = "he" Then
             Me.RightToLeft = RightToLeft.Yes
             Me.RightToLeftLayout = True
+            'Me.BackgroundImage = My.Resources.blue_fabric_texture
         End If
         Try
             If Not Directory.Exists(MAIN_DIR_NAME) Then
