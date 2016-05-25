@@ -57,8 +57,8 @@ Partial Class Form1
         '
         'LsbProjects
         '
-        resources.ApplyResources(Me.LsbProjects, "LsbProjects")
         Me.LsbProjects.FormattingEnabled = True
+        resources.ApplyResources(Me.LsbProjects, "LsbProjects")
         Me.LsbProjects.Name = "LsbProjects"
         '
         'TxbFilter1
@@ -68,8 +68,8 @@ Partial Class Form1
         '
         'LstJobs
         '
-        resources.ApplyResources(Me.LstJobs, "LstJobs")
         Me.LstJobs.FormattingEnabled = True
+        resources.ApplyResources(Me.LstJobs, "LstJobs")
         Me.LstJobs.Name = "LstJobs"
         '
         'BtnProject
