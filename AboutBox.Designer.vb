@@ -47,6 +47,7 @@ Partial Class AboutBox
         'TableLayoutPanel
         '
         resources.ApplyResources(Me.TableLayoutPanel, "TableLayoutPanel")
+        Me.TableLayoutPanel.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.TableLayoutPanel.Controls.Add(Me.LogoPictureBox, 0, 0)
         Me.TableLayoutPanel.Controls.Add(Me.LabelProductName, 1, 0)
         Me.TableLayoutPanel.Controls.Add(Me.LabelVersion, 1, 1)
@@ -86,6 +87,7 @@ Partial Class AboutBox
         'TextBoxDescription
         '
         resources.ApplyResources(Me.TextBoxDescription, "TextBoxDescription")
+        Me.TextBoxDescription.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.TextBoxDescription.Name = "TextBoxDescription"
         Me.TextBoxDescription.ReadOnly = True
         Me.TextBoxDescription.TabStop = False
@@ -93,13 +95,16 @@ Partial Class AboutBox
         'OKButton
         '
         resources.ApplyResources(Me.OKButton, "OKButton")
+        Me.OKButton.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.OKButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.OKButton.Name = "OKButton"
+        Me.OKButton.UseVisualStyleBackColor = False
         '
         'AboutBox
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.LM_job.My.Resources.Resources.blue_fabric_texture
         Me.CancelButton = Me.OKButton
         Me.Controls.Add(Me.TableLayoutPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog

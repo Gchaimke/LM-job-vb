@@ -156,6 +156,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AboutBox.he-IL.resx">
+      <DependentUpon>AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.vb</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +238,16 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SettingsIcon.ico" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\user-settings-icon.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\printer-16.png" />
+    <None Include="Resources\add-folder-16.png" />
+    <None Include="Resources\add-file-16.png" />
+    <None Include="Resources\blue_sky_texture_i_by_hkpasseystock.jpg" />
+    <None Include="Resources\baby-blue-fabric-texture.jpg" />
     <Content Include="Untitled.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

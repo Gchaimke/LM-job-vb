@@ -118,34 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Blank_job" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Job-file.lmj;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="_3PS_094_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3PS-094-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="_3PS_1000_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3PS-1000-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="_3PS_125_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3PS-125-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="printer_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_3PS_1500_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3PS-1500-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="add_folder_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-folder-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="_3PS_187_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3PS-187-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="_3PS_250_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3PS-250-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="_3PS_375_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3PS-375-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="_3PS_500_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3PS-500-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Blank_job" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Job-file.lmj;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_250_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-250-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="_3PS_750_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3PS-750-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3PS_094_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-094-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_1500_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-1500-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_375_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-375-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="_3PS_125_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-125-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="add_file_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add-file-16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user-settings-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3PS_187_2_WT" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3PS-187-2-WT.l5f;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="blue_fabric_texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baby-blue-fabric-texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

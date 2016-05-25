@@ -121,16 +121,19 @@
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 84</value>
+    <value>14, 90</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+    <value>59, 14</value>
   </data>
   <data name="Label1.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -153,14 +156,17 @@
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 38</value>
+    <value>14, 32</value>
   </data>
   <data name="Label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
   <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 13</value>
+    <value>85, 14</value>
   </data>
   <data name="Label2.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -180,11 +186,17 @@
   <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <data name="LsbProjects.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="LsbProjects.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 112</value>
+    <value>14, 121</value>
+  </data>
+  <data name="LsbProjects.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="LsbProjects.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 225</value>
+    <value>199, 242</value>
   </data>
   <data name="LsbProjects.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -202,10 +214,13 @@
     <value>17</value>
   </data>
   <data name="TxbFilter1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 54</value>
+    <value>14, 54</value>
+  </data>
+  <data name="TxbFilter1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="TxbFilter1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 20</value>
+    <value>199, 22</value>
   </data>
   <data name="TxbFilter1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -222,11 +237,17 @@
   <data name="&gt;&gt;TxbFilter1.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
+  <data name="LstJobs.ItemHeight" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
   <data name="LstJobs.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 112</value>
+    <value>232, 121</value>
+  </data>
+  <data name="LstJobs.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="LstJobs.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 225</value>
+    <value>221, 242</value>
   </data>
   <data name="LstJobs.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -243,86 +264,29 @@
   <data name="&gt;&gt;LstJobs.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="BtnProject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 343</value>
+  <data name="BtnNewJob.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
   </data>
-  <data name="BtnProject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 23</value>
+  <data name="BtnNewJob.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="BtnProject.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="BtnProject.Text" xml:space="preserve">
-    <value>New Project folder</value>
-  </data>
-  <data name="&gt;&gt;BtnProject.Name" xml:space="preserve">
-    <value>BtnProject</value>
-  </data>
-  <data name="&gt;&gt;BtnProject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnProject.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtnProject.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="BtnOpen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>585, 233</value>
-  </data>
-  <data name="BtnOpen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="BtnOpen.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="BtnOpen.Text" xml:space="preserve">
-    <value>Print</value>
-  </data>
-  <data name="&gt;&gt;BtnOpen.Name" xml:space="preserve">
-    <value>BtnOpen</value>
-  </data>
-  <data name="&gt;&gt;BtnOpen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnOpen.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtnOpen.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="BtnDlete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>491, 233</value>
-  </data>
-  <data name="BtnDlete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 23</value>
-  </data>
-  <data name="BtnDlete.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="BtnDlete.Text" xml:space="preserve">
-    <value>Delete Label</value>
-  </data>
-  <data name="&gt;&gt;BtnDlete.Name" xml:space="preserve">
-    <value>BtnDlete</value>
-  </data>
-  <data name="&gt;&gt;BtnDlete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnDlete.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtnDlete.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="BtnNewJob.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="BtnNewJob.Location" type="System.Drawing.Point, System.Drawing">
-    <value>189, 343</value>
+    <value>232, 369</value>
+  </data>
+  <data name="BtnNewJob.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BtnNewJob.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 0, 0</value>
   </data>
   <data name="BtnNewJob.Size" type="System.Drawing.Size, System.Drawing">
-    <value>190, 23</value>
+    <value>222, 43</value>
   </data>
   <data name="BtnNewJob.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="BtnNewJob.Text" xml:space="preserve">
     <value>New Label file</value>
@@ -339,38 +303,17 @@
   <data name="&gt;&gt;BtnNewJob.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="BtnEdit.Location" type="System.Drawing.Point, System.Drawing">
-    <value>403, 233</value>
-  </data>
-  <data name="BtnEdit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 23</value>
-  </data>
-  <data name="BtnEdit.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="BtnEdit.Text" xml:space="preserve">
-    <value>Edit Label</value>
-  </data>
-  <data name="&gt;&gt;BtnEdit.Name" xml:space="preserve">
-    <value>BtnEdit</value>
-  </data>
-  <data name="&gt;&gt;BtnEdit.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BtnEdit.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;BtnEdit.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <data name="LblDetals.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="LblDetals.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="LblDetals.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 134</value>
+    <value>539, 144</value>
   </data>
   <data name="LblDetals.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>0, 14</value>
   </data>
   <data name="LblDetals.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -390,11 +333,14 @@
   <data name="LblCopies.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="LblCopies.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="LblCopies.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 158</value>
+    <value>539, 170</value>
   </data>
   <data name="LblCopies.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>0, 14</value>
   </data>
   <data name="LblCopies.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -414,11 +360,14 @@
   <data name="LblPrinter.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="LblPrinter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="LblPrinter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>462, 112</value>
+    <value>539, 121</value>
   </data>
   <data name="LblPrinter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>0, 14</value>
   </data>
   <data name="LblPrinter.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -438,14 +387,17 @@
   <data name="LblPath.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="LblPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="LblPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>456, 183</value>
+    <value>532, 197</value>
   </data>
   <data name="LblPath.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>200, 0</value>
+    <value>233, 0</value>
   </data>
   <data name="LblPath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 13</value>
+    <value>0, 14</value>
   </data>
   <data name="LblPath.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -462,17 +414,23 @@
   <data name="&gt;&gt;LblPath.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="Button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>547, 153</value>
+    <value>575, 164</value>
+  </data>
+  <data name="Button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="Button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 23</value>
+    <value>70, 24</value>
   </data>
   <data name="Button1.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
+    <value>6</value>
   </data>
   <data name="Button1.Text" xml:space="preserve">
-    <value>change</value>
+    <value>Change</value>
   </data>
   <data name="&gt;&gt;Button1.Name" xml:space="preserve">
     <value>Button1</value>
@@ -493,10 +451,10 @@
     <value>NoControl</value>
   </data>
   <data name="LblPrinterText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 112</value>
+    <value>467, 121</value>
   </data>
   <data name="LblPrinterText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 13</value>
+    <value>61, 14</value>
   </data>
   <data name="LblPrinterText.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -523,10 +481,10 @@
     <value>NoControl</value>
   </data>
   <data name="LblDetalsText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 134</value>
+    <value>467, 144</value>
   </data>
   <data name="LblDetalsText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
+    <value>69, 14</value>
   </data>
   <data name="LblDetalsText.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -553,10 +511,10 @@
     <value>NoControl</value>
   </data>
   <data name="LblCopiesText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 158</value>
+    <value>467, 170</value>
   </data>
   <data name="LblCopiesText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 13</value>
+    <value>59, 14</value>
   </data>
   <data name="LblCopiesText.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -583,13 +541,13 @@
     <value>NoControl</value>
   </data>
   <data name="LblPathText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>400, 183</value>
+    <value>467, 197</value>
   </data>
   <data name="LblPathText.MaximumSize" type="System.Drawing.Size, System.Drawing">
-    <value>250, 0</value>
+    <value>292, 0</value>
   </data>
   <data name="LblPathText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 13</value>
+    <value>48, 14</value>
   </data>
   <data name="LblPathText.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -609,17 +567,23 @@
   <data name="&gt;&gt;LblPathText.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="Button2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="Button2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="Button2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>611, 343</value>
+    <value>687, 354</value>
+  </data>
+  <data name="Button2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
   </data>
   <data name="Button2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
+    <value>87, 60</value>
   </data>
   <data name="Button2.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="Button2.Text" xml:space="preserve">
-    <value>Settings</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;Button2.Name" xml:space="preserve">
     <value>Button2</value>
@@ -633,6 +597,159 @@
   <data name="&gt;&gt;Button2.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="BtnEdit.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="BtnEdit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>461, 251</value>
+  </data>
+  <data name="BtnEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BtnEdit.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 0, 0</value>
+  </data>
+  <data name="BtnEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 42</value>
+  </data>
+  <data name="BtnEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="BtnEdit.Text" xml:space="preserve">
+    <value>Edit Label</value>
+  </data>
+  <data name="BtnEdit.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;BtnEdit.Name" xml:space="preserve">
+    <value>BtnEdit</value>
+  </data>
+  <data name="&gt;&gt;BtnEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnEdit.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="BtnDlete.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="BtnDlete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnDlete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>563, 251</value>
+  </data>
+  <data name="BtnDlete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BtnDlete.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 0, 0</value>
+  </data>
+  <data name="BtnDlete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 42</value>
+  </data>
+  <data name="BtnDlete.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="BtnDlete.Text" xml:space="preserve">
+    <value>Delete Label</value>
+  </data>
+  <data name="BtnDlete.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;BtnDlete.Name" xml:space="preserve">
+    <value>BtnDlete</value>
+  </data>
+  <data name="&gt;&gt;BtnDlete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnDlete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnDlete.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="BtnOpen.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="BtnOpen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnOpen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>689, 251</value>
+  </data>
+  <data name="BtnOpen.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BtnOpen.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 0, 0</value>
+  </data>
+  <data name="BtnOpen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 42</value>
+  </data>
+  <data name="BtnOpen.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="BtnOpen.Text" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="&gt;&gt;BtnOpen.Name" xml:space="preserve">
+    <value>BtnOpen</value>
+  </data>
+  <data name="&gt;&gt;BtnOpen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnOpen.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnOpen.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="BtnProject.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="BtnProject.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="BtnProject.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="BtnProject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 369</value>
+  </data>
+  <data name="BtnProject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="BtnProject.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 0, 0, 0</value>
+  </data>
+  <data name="BtnProject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 43</value>
+  </data>
+  <data name="BtnProject.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="BtnProject.Text" xml:space="preserve">
+    <value>New Project folder</value>
+  </data>
+  <data name="&gt;&gt;BtnProject.Name" xml:space="preserve">
+    <value>BtnProject</value>
+  </data>
+  <data name="&gt;&gt;BtnProject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;BtnProject.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;BtnProject.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -640,10 +757,16 @@
     <value>38</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>7, 14</value>
+  </data>
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>698, 380</value>
+    <value>791, 425</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 9pt, style=Bold</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -28,11 +28,7 @@ Partial Class Form1
         Me.LsbProjects = New System.Windows.Forms.ListBox()
         Me.TxbFilter1 = New System.Windows.Forms.TextBox()
         Me.LstJobs = New System.Windows.Forms.ListBox()
-        Me.BtnProject = New System.Windows.Forms.Button()
-        Me.BtnOpen = New System.Windows.Forms.Button()
-        Me.BtnDlete = New System.Windows.Forms.Button()
         Me.BtnNewJob = New System.Windows.Forms.Button()
-        Me.BtnEdit = New System.Windows.Forms.Button()
         Me.LblDetals = New System.Windows.Forms.Label()
         Me.LblCopies = New System.Windows.Forms.Label()
         Me.LblPrinter = New System.Windows.Forms.Label()
@@ -43,6 +39,10 @@ Partial Class Form1
         Me.LblCopiesText = New System.Windows.Forms.Label()
         Me.LblPathText = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.BtnEdit = New System.Windows.Forms.Button()
+        Me.BtnDlete = New System.Windows.Forms.Button()
+        Me.BtnOpen = New System.Windows.Forms.Button()
+        Me.BtnProject = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -72,35 +72,12 @@ Partial Class Form1
         resources.ApplyResources(Me.LstJobs, "LstJobs")
         Me.LstJobs.Name = "LstJobs"
         '
-        'BtnProject
-        '
-        resources.ApplyResources(Me.BtnProject, "BtnProject")
-        Me.BtnProject.Name = "BtnProject"
-        Me.BtnProject.UseVisualStyleBackColor = True
-        '
-        'BtnOpen
-        '
-        resources.ApplyResources(Me.BtnOpen, "BtnOpen")
-        Me.BtnOpen.Name = "BtnOpen"
-        Me.BtnOpen.UseVisualStyleBackColor = True
-        '
-        'BtnDlete
-        '
-        resources.ApplyResources(Me.BtnDlete, "BtnDlete")
-        Me.BtnDlete.Name = "BtnDlete"
-        Me.BtnDlete.UseVisualStyleBackColor = True
-        '
         'BtnNewJob
         '
         resources.ApplyResources(Me.BtnNewJob, "BtnNewJob")
+        Me.BtnNewJob.Image = Global.LM_job.My.Resources.Resources.add_file_16
         Me.BtnNewJob.Name = "BtnNewJob"
         Me.BtnNewJob.UseVisualStyleBackColor = True
-        '
-        'BtnEdit
-        '
-        resources.ApplyResources(Me.BtnEdit, "BtnEdit")
-        Me.BtnEdit.Name = "BtnEdit"
-        Me.BtnEdit.UseVisualStyleBackColor = True
         '
         'LblDetals
         '
@@ -151,13 +128,44 @@ Partial Class Form1
         'Button2
         '
         resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Image = Global.LM_job.My.Resources.Resources.settings_icon
         Me.Button2.Name = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'BtnEdit
+        '
+        Me.BtnEdit.Image = Global.LM_job.My.Resources.Resources.edit
+        resources.ApplyResources(Me.BtnEdit, "BtnEdit")
+        Me.BtnEdit.Name = "BtnEdit"
+        Me.BtnEdit.UseVisualStyleBackColor = True
+        '
+        'BtnDlete
+        '
+        Me.BtnDlete.Image = Global.LM_job.My.Resources.Resources.delete
+        resources.ApplyResources(Me.BtnDlete, "BtnDlete")
+        Me.BtnDlete.Name = "BtnDlete"
+        Me.BtnDlete.UseVisualStyleBackColor = True
+        '
+        'BtnOpen
+        '
+        Me.BtnOpen.Image = Global.LM_job.My.Resources.Resources.printer_16
+        resources.ApplyResources(Me.BtnOpen, "BtnOpen")
+        Me.BtnOpen.Name = "BtnOpen"
+        Me.BtnOpen.UseVisualStyleBackColor = True
+        '
+        'BtnProject
+        '
+        resources.ApplyResources(Me.BtnProject, "BtnProject")
+        Me.BtnProject.Image = Global.LM_job.My.Resources.Resources.add_folder_16
+        Me.BtnProject.Name = "BtnProject"
+        Me.BtnProject.UseVisualStyleBackColor = True
         '
         'Form1
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.BackgroundImage = Global.LM_job.My.Resources.Resources.blue_fabric_texture
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.LblPathText)
         Me.Controls.Add(Me.LblCopiesText)
@@ -178,6 +186,8 @@ Partial Class Form1
         Me.Controls.Add(Me.LsbProjects)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
